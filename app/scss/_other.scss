@@ -1,0 +1,365 @@
+/* 
+		_other.scss
+*/
+
+/*
+										---OTHER---
+*/
+
+
+
+// ---REV---
+
+.tparrows{
+	background-position: 0 -1px;
+	background-image: none !important;
+	&.tp-rightarrow{
+		//transform: rotate(180deg);
+	}
+	&.tp-leftarrow{
+		transform: rotate(180deg);
+	}
+
+	svg{
+		//stroke: white;
+		//stroke-width: 5px;
+		fill: $color-1;
+		transition:all 0.3s ease-in-out;
+	}
+	&:hover{
+		svg{
+			fill: $color-3;
+		}
+	}
+}
+html body{
+	
+	.tp-bullets.simplebullets.round .bullet{
+		background-image: none;
+		background-color: rgba( $color-1, 1 );
+	  border: 1px solid transparent;
+	  //transform: scale(0.8);
+	  width: 12px;
+	  height: 12px;
+	  border-radius: 50%;
+	  margin-left: 14px;
+	  transition: all 0.1s ease-in-out;
+	  &:hover, &.selected{
+	  	background-color: rgba( $color-1, 0.0 );
+	  	border-color: $color-1;
+	  	transform: scale(1.6);
+	  	&:before{
+	  		color: $color-1;
+	  		opacity: 0.8;
+	  	}
+	  }
+	  &:first-child{
+	  	margin-left: 0;
+	  }
+	  &:before{
+	  	@extend .claf;
+	  	opacity: 0.5;
+	  	text-align: center;
+	  	transition: all 0.2s ease-in-out 0.1s;
+	  	color: $color-2;
+	  	font-size: 0.9em;
+	  	top: 100%;
+	  }
+
+	}
+}
+
+
+
+
+
+
+
+
+// ---FANCYBOX---
+[data-fancybox]{
+	display: block;
+	position: relative;
+	z-index: 1;
+	&:focus{
+		outline: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+// ---FLICKITY---
+.carousel-prev-next{
+	color: inherit;
+  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  *{
+  	pointer-events: auto;
+  }
+	.next, .prev{
+		font-size: 45px;
+		border: 0;
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		//margin-top: -2.25px;
+		color: $color-1;
+		fill: $color-1;
+		&:hover{
+			cursor: pointer;
+			color: $color-1;
+		}
+	}
+	.next{
+		right: 0;
+		&.reverse{
+			transform: scaleX(-1);
+		}
+	}
+	.prev{
+		left: 0;
+		&.reverse{
+			transform: scaleX(-1);
+		}
+	}
+}
+.flickity-btn-1{
+
+	.flickity-prev-next-button{
+		background: transparent;
+		//border: 4px solid white;
+		transition: all 0.2s ease-in-out;
+
+		&:hover, &:focus{
+			background-color: transparent;
+		}
+		.arrow{
+			fill: $color-1;
+		}
+		&.previous{
+			transform: rotate(180deg) translateY(50%);
+			transform-origin: center;
+		}
+		&.next{
+			transform: rotate(0deg) translateY(-50%);
+		}
+
+		@media ( min-width:992px ){
+			.previous svg{
+				left: -20%;
+			}
+			.next svg{
+				right: -20%;
+			}
+		}
+
+	}
+	&.flickity-btn-hidden{
+		.flickity-prev-next-button{
+			opacity: 0;
+		}
+		&:hover{
+			.flickity-prev-next-button{
+				opacity: 1;
+			}
+		}
+	}
+}
+.flickity-page-dots{
+	margin: 30px 0;
+	margin-bottom: 60px;
+	.dot{
+		transition: all 0.3s ease;
+		background-color: rgba(black, 0.2);
+		opacity: 1;
+  	width: 13px;
+  	height: 13px;
+		&.is-selected{
+			background-color: rgba($color-1, 1);
+		}
+	}
+}
+.prev-next-dots{
+	.carousel-prev-next{
+		position: relative;
+		.next{
+		}
+		.prev, .next{
+			left: inherit; left: unset;
+			right: inherit; right: unset;
+			top: 50%;
+    	margin-top: -22.5+1px;
+		}
+		.prev{
+			transform: translateX(-100%);
+			&.reverse{
+				transform: translateX(-100%) scaleX(-1);
+			}
+		}
+
+	}
+}
+
+
+
+
+.carousel-article{
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+	.carousel {
+	  margin-bottom: 20px;
+	}
+	.carousel-cell {
+	  width: 100%;
+	  height: auto;
+	  margin-right: 10px;
+	}
+	img{
+		width: 100%;
+	}
+	.carousel-main{
+		.flickity-viewport{
+			border: 1px solid rgba($color-gray-1, 0.2);
+			//border-radius: 15px;
+			overflow: hidden;
+		}
+	}
+	.carousel-nav{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 2px 5px;
+		.carousel-cell{
+	  	width: 30%;
+			height: auto;
+	  	margin-right: 10px;
+	  	border: 5px solid transparent;
+	  	transition: all 0.3s ease-out;
+	  	&.is-nav-selected{
+	  	 //border-color: $color-1;
+	  	}
+		}
+		.is-selected{
+			border-color: rgba($color-1, 1);
+		}
+	}
+	.flickity-prev-next-button.previous{ left: -10px; }
+	.flickity-prev-next-button.next{ right: -10px; }
+	.flickity-page-dots{
+		margin-bottom: -140px;
+	
+	}
+}
+
+
+
+
+
+.carousel-stand{
+	.carousel {
+	  background: #FAFAFA;
+	  margin-bottom: 40px;
+	}
+	.carousel-cell {
+	  width: 100%;
+	  height: 200px;
+	  margin-right: 10px;
+	  background: #8C8;
+	  border-radius: 5px;
+	  counter-increment: carousel-cell;
+	  &:before{
+		 	display: block;
+		  text-align: center;
+		  content: counter(carousel-cell);
+		  line-height: 200px;
+		  font-size: 80px;
+		  color: white;
+	  }
+	}
+	.carousel-nav{
+
+		.carousel-cell{
+			height: 80px;
+	  	width: 100px;
+	  	&:before{
+				font-size: 50px;
+				line-height: 80px;
+	  	}
+	  	&.is-nav-selected{
+	  	 background: #ED2;
+	  	}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+// ---MASONRY---
+.grid-img {
+  //background: #DDD;
+}
+
+/* clear fix */
+.grid-img:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-img-sizer, .grid-img-item {
+  width: (100/4)+%;
+}
+
+.grid-img-item {
+  //float: left;
+}
+
+.grid-img-item img {
+  display: block;
+  padding: 3px;
+  max-width: 100%;
+}
+
+
+
+// ---ELEVATEZOOM---
+/*
+.zoomWindowContainer{
+	//width: 600px;
+	left: -180%;
+	top: -45%;
+	position: relative;
+}
+ */
+.zoomContainer{
+	z-index: 1;
+}
+.zoomWindowContainer{
+	//width: 800px;
+	*{
+		border: 5px solid rgba($color-4, 0.5) !important;
+		border-radius: 3px;
+	}
+	left: 15px;
+  position: relative;
+}
+
+

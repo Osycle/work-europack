@@ -1,0 +1,72 @@
+/* 
+		_footer.scss
+*/
+
+/*
+										---FOOTER---
+*/
+
+
+
+#footer{
+	position: relative;
+	color: white;
+	min-height: 150px;
+	line-height: 170%;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-size: cover;
+	background-image: url("../img/bg/bg-footer.jpg");
+}
+.phone-call{
+	img{
+		width: 22px;
+	}
+}
+.envelope{
+	img{
+		width: 23px;
+	}
+}
+.footer-menu{
+	li{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	a{
+		font-weight: 400;
+		transition: all 0.2s ease;
+		display: block;
+		&:hover{
+			font-weight: 500;
+			//color: lighten($color-1, 50%);
+		}
+	}
+}
+.footer-socicons{
+	li{
+		text-align: center;
+		display: inline-block;
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+	a{
+		border: 1px solid transparent;
+		padding: 6px;
+		width: 35px;
+		height: 35px;
+		display: block;
+		font-size: 18px;
+		&:hover{
+			border-color: white;
+		}
+	}
+}
+.footer-dev{
+	font-size: 0.88em;
+}
+.footer-contacts{
+	p{
+		@extend .float-right-md;
+	}
+}

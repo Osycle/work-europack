@@ -1,0 +1,825 @@
+$path: "../fonts/";
+
+// Font-awesome
+@font-face {
+    font-family: 'FontAwesome';
+    src: url($path+'fontawesome-webfont.eot?v=4.7.0');
+    src: url($path+'fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+    url($path+'fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+    url($path+'fontawesome-webfont.woff?v=4.7.0') format('woff'),
+    url($path+'fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+    url($path+'fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+//Montserrat
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  src: url($path+'/montserrat-v12-cyrillic_latin-100.eot'); 
+  src: local('Montserrat Thin'), local('Montserrat-Thin'),
+       url($path+'/montserrat-v12-cyrillic_latin-100.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100;
+  src: url($path+'/montserrat-v12-cyrillic_latin-100italic.eot'); 
+  src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-100italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-100italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: url($path+'/montserrat-v12-cyrillic_latin-200.eot'); 
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
+       url($path+'/montserrat-v12-cyrillic_latin-200.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 200;
+  src: url($path+'/montserrat-v12-cyrillic_latin-200italic.eot'); 
+  src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-200italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-200italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url($path+'/montserrat-v12-cyrillic_latin-300.eot'); 
+  src: local('Montserrat Light'), local('Montserrat-Light'),
+       url($path+'/montserrat-v12-cyrillic_latin-300.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 300;
+  src: url($path+'/montserrat-v12-cyrillic_latin-300italic.eot'); 
+  src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-300italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-300italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url($path+'/montserrat-v12-cyrillic_latin-regular.eot'); 
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url($path+'/montserrat-v12-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-regular.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-regular.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-regular.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-regular.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: url($path+'/montserrat-v12-cyrillic_latin-italic.eot'); 
+  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+       url($path+'/montserrat-v12-cyrillic_latin-italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  src: url($path+'/montserrat-v12-cyrillic_latin-500italic.eot'); 
+  src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-500italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url($path+'/montserrat-v12-cyrillic_latin-500.eot'); 
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+       url($path+'/montserrat-v12-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-500.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url($path+'/montserrat-v12-cyrillic_latin-600.eot'); 
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url($path+'/montserrat-v12-cyrillic_latin-600.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  src: url($path+'/montserrat-v12-cyrillic_latin-600italic.eot'); 
+  src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-600italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-600italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url($path+'/montserrat-v12-cyrillic_latin-700.eot'); 
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url($path+'/montserrat-v12-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: url($path+'/montserrat-v12-cyrillic_latin-700italic.eot'); 
+  src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-700italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-700italic.svg#Montserrat') format('svg'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: url($path+'/montserrat-v12-cyrillic_latin-800.eot'); 
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+       url($path+'/montserrat-v12-cyrillic_latin-800.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800.svg#Montserrat') format('svg'); 
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  src: url($path+'/montserrat-v12-cyrillic_latin-800italic.eot'); 
+  src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-800italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-800italic.svg#Montserrat') format('svg'); 
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url($path+'/montserrat-v12-cyrillic_latin-900.eot'); 
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+       url($path+'/montserrat-v12-cyrillic_latin-900.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900.svg#Montserrat') format('svg'); 
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  src: url($path+'/montserrat-v12-cyrillic_latin-900italic.eot'); 
+  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'),
+       url($path+'/montserrat-v12-cyrillic_latin-900italic.eot?#iefix') format('embedded-opentype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900italic.woff2') format('woff2'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900italic.woff') format('woff'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900italic.ttf') format('truetype'), 
+       url($path+'/montserrat-v12-cyrillic_latin-900italic.svg#Montserrat') format('svg'); 
+}
+
+
+
+
+// --Gotham Pro--
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-BoldItalic.eot');
+//     src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'),
+//     url($path+'GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-BoldItalic.woff') format('woff'),
+//     url($path+'GothamPro-BoldItalic.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-Italic.eot');
+//     src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
+//     url($path+'GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-Italic.woff') format('woff'),
+//     url($path+'GothamPro-Italic.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-Medium.eot');
+//     src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+//     url($path+'GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-Medium.woff') format('woff'),
+//     url($path+'GothamPro-Medium.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-BlackItalic.eot');
+//     src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'),
+//     url($path+'GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-BlackItalic.woff') format('woff'),
+//     url($path+'GothamPro-BlackItalic.ttf') format('truetype');
+//     font-weight: 900;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-Bold.eot');
+//     src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+//     url($path+'GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-Bold.woff') format('woff'),
+//     url($path+'GothamPro-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro Narrow';
+//     src: url($path+'GothamProNarrow-Bold.eot');
+//     src: local('Gotham Pro Narrow Bold'), local('GothamProNarrow-Bold'),
+//     url($path+'GothamProNarrow-Bold.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamProNarrow-Bold.woff') format('woff'),
+//     url($path+'GothamProNarrow-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro Narrow';
+//     src: url($path+'GothamProNarrow-Medium.eot');
+//     src: local('Gotham Pro Narrow Medium'), local('GothamProNarrow-Medium'),
+//     url($path+'GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamProNarrow-Medium.woff') format('woff'),
+//     url($path+'GothamProNarrow-Medium.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-LightItalic.eot');
+//     src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'),
+//     url($path+'GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-LightItalic.woff') format('woff'),
+//     url($path+'GothamPro-LightItalic.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-Light.eot');
+//     src: local('Gotham Pro Light'), local('GothamPro-Light'),
+//     url($path+'GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-Light.woff') format('woff'),
+//     url($path+'GothamPro-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-Black.eot');
+//     src: local('Gotham Pro Black'), local('GothamPro-Black'),
+//     url($path+'GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-Black.woff') format('woff'),
+//     url($path+'GothamPro-Black.ttf') format('truetype');
+//     font-weight: 900;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro.eot');
+//     src: local('Gotham Pro'), local('GothamPro'),
+//     url($path+'GothamPro.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro.woff') format('woff'),
+//     url($path+'GothamPro.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gotham Pro';
+//     src: url($path+'GothamPro-MediumItalic.eot');
+//     src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'),
+//     url($path+'GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+//     url($path+'GothamPro-MediumItalic.woff') format('woff'),
+//     url($path+'GothamPro-MediumItalic.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: italic;
+// }
+
+
+
+
+
+
+// --Gilroy--
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroySemiBold.eot');
+//     src: url($path+'GilroySemiBold.eot') format('embedded-opentype'),
+//     url($path+'GilroySemiBold.woff2') format('woff2'),
+//     url($path+'GilroySemiBold.woff') format('woff'),
+//     url($path+'GilroySemiBold.ttf') format('truetype'),
+//     url($path+'GilroySemiBold.svg#GilroySemiBold') format('svg');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroySemiBoldItalic.eot');
+//     src: url($path+'GilroySemiBoldItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroySemiBoldItalic.woff2') format('woff2'),
+//     url($path+'GilroySemiBoldItalic.woff') format('woff'),
+//     url($path+'GilroySemiBoldItalic.ttf') format('truetype'),
+//     url($path+'GilroySemiBoldItalic.svg#GilroySemiBoldItalic') format('svg');
+//     font-weight: 600;
+//     font-style: italic;
+// }
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyBoldItalic.eot');
+//     src: url($path+'GilroyBoldItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyBoldItalic.woff2') format('woff2'),
+//     url($path+'GilroyBoldItalic.woff') format('woff'),
+//     url($path+'GilroyBoldItalic.ttf') format('truetype'),
+//     url($path+'GilroyBoldItalic.svg#GilroyBoldItalic') format('svg');
+//     font-weight: bold;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyBold.eot');
+//     src: url($path+'GilroyBold.eot') format('embedded-opentype'),
+//     url($path+'GilroyBold.woff2') format('woff2'),
+//     url($path+'GilroyBold.woff') format('woff'),
+//     url($path+'GilroyBold.ttf') format('truetype'),
+//     url($path+'GilroyBold.svg#GilroyBold') format('svg');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyExtraBold.eot');
+//     src: url($path+'GilroyExtraBold.eot') format('embedded-opentype'),
+//     url($path+'GilroyExtraBold.woff2') format('woff2'),
+//     url($path+'GilroyExtraBold.woff') format('woff'),
+//     url($path+'GilroyExtraBold.ttf') format('truetype'),
+//     url($path+'GilroyExtraBold.svg#GilroyExtraBold') format('svg');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyExtraBoldItalic.eot');
+//     src: url($path+'GilroyExtraBoldItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyExtraBoldItalic.woff2') format('woff2'),
+//     url($path+'GilroyExtraBoldItalic.woff') format('woff'),
+//     url($path+'GilroyExtraBoldItalic.ttf') format('truetype'),
+//     url($path+'GilroyExtraBoldItalic.svg#GilroyExtraBoldItalic') format('svg');
+//     font-weight: 800;
+//     font-style: italic;
+// }
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyBlack.eot');
+//     src: url($path+'GilroyBlack.eot') format('embedded-opentype'),
+//     url($path+'GilroyBlack.woff2') format('woff2'),
+//     url($path+'GilroyBlack.woff') format('woff'),
+//     url($path+'GilroyBlack.ttf') format('truetype'),
+//     url($path+'GilroyBlack.svg#GilroyBlack') format('svg');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyBlackItalic.eot');
+//     src: url($path+'GilroyBlackItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyBlackItalic.woff2') format('woff2'),
+//     url($path+'GilroyBlackItalic.woff') format('woff'),
+//     url($path+'GilroyBlackItalic.ttf') format('truetype'),
+//     url($path+'GilroyBlackItalic.svg#GilroyBlackItalic') format('svg');
+//     font-weight: 800;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyHeavy.eot');
+//     src: url($path+'GilroyHeavy.eot') format('embedded-opentype'),
+//     url($path+'GilroyHeavy.woff2') format('woff2'),
+//     url($path+'GilroyHeavy.woff') format('woff'),
+//     url($path+'GilroyHeavy.ttf') format('truetype'),
+//     url($path+'GilroyHeavy.svg#GilroyHeavy') format('svg');
+//     font-weight: 900;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyHeavyItalic.eot');
+//     src: url($path+'GilroyHeavyItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyHeavyItalic.woff2') format('woff2'),
+//     url($path+'GilroyHeavyItalic.woff') format('woff'),
+//     url($path+'GilroyHeavyItalic.ttf') format('truetype'),
+//     url($path+'GilroyHeavyItalic.svg#GilroyHeavyItalic') format('svg');
+//     font-weight: 900;
+//     font-style: italic;
+// }
+
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyMedium.eot');
+//     src: url($path+'GilroyMedium.eot') format('embedded-opentype'),
+//     url($path+'GilroyMedium.woff2') format('woff2'),
+//     url($path+'GilroyMedium.woff') format('woff'),
+//     url($path+'GilroyMedium.ttf') format('truetype'),
+//     url($path+'GilroyMedium.svg#GilroyMedium') format('svg');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyMediumItalic.eot');
+//     src: url($path+'GilroyMediumItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyMediumItalic.woff2') format('woff2'),
+//     url($path+'GilroyMediumItalic.woff') format('woff'),
+//     url($path+'GilroyMediumItalic.ttf') format('truetype'),
+//     url($path+'GilroyMediumItalic.svg#GilroyMediumItalic') format('svg');
+//     font-weight: 500;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyRegular.eot');
+//     src: url($path+'GilroyRegular.eot') format('embedded-opentype'),
+//     url($path+'GilroyRegular.woff2') format('woff2'),
+//     url($path+'GilroyRegular.woff') format('woff'),
+//     url($path+'GilroyRegular.ttf') format('truetype'),
+//     url($path+'GilroyRegular.svg#GilroyRegular') format('svg');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyRegularItalic.eot');
+//     src: url($path+'GilroyRegularItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyRegularItalic.woff2') format('woff2'),
+//     url($path+'GilroyRegularItalic.woff') format('woff'),
+//     url($path+'GilroyRegularItalic.ttf') format('truetype'),
+//     url($path+'GilroyRegularItalic.svg#GilroyRegularItalic') format('svg');
+//     font-weight: 400;
+//     font-style: italic;
+// }
+
+
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyThin.eot');
+//     src: url($path+'GilroyThin.eot') format('embedded-opentype'),
+//     url($path+'GilroyThin.woff2') format('woff2'),
+//     url($path+'GilroyThin.woff') format('woff'),
+//     url($path+'GilroyThin.ttf') format('truetype'),
+//     url($path+'GilroyThin.svg#GilroyThin') format('svg');
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyThinItalic.eot');
+//     src: url($path+'GilroyThinItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyThinItalic.woff2') format('woff2'),
+//     url($path+'GilroyThinItalic.woff') format('woff'),
+//     url($path+'GilroyThinItalic.ttf') format('truetype'),
+//     url($path+'GilroyThinItalic.svg#GilroyThinItalic') format('svg');
+//     font-weight: 100;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyLight.eot');
+//     src: url($path+'GilroyLight.eot') format('embedded-opentype'),
+//     url($path+'GilroyLight.woff2') format('woff2'),
+//     url($path+'GilroyLight.woff') format('woff'),
+//     url($path+'GilroyLight.ttf') format('truetype'),
+//     url($path+'GilroyLight.svg#GilroyLight') format('svg');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyLightItalic.eot');
+//     src: url($path+'GilroyLightItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyLightItalic.woff2') format('woff2'),
+//     url($path+'GilroyLightItalic.woff') format('woff'),
+//     url($path+'GilroyLightItalic.ttf') format('truetype'),
+//     url($path+'GilroyLightItalic.svg#GilroyLightItalic') format('svg');
+//     font-weight: 300;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyUltraLight.eot');
+//     src: url($path+'GilroyUltraLight.eot') format('embedded-opentype'),
+//     url($path+'GilroyUltraLight.woff2') format('woff2'),
+//     url($path+'GilroyUltraLight.woff') format('woff'),
+//     url($path+'GilroyUltraLight.ttf') format('truetype'),
+//     url($path+'GilroyUltraLight.svg#GilroyUltraLight') format('svg');
+//     font-weight: 200;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     src: url($path+'GilroyUltraLightItalic.eot');
+//     src: url($path+'GilroyUltraLightItalic.eot') format('embedded-opentype'),
+//     url($path+'GilroyUltraLightItalic.woff2') format('woff2'),
+//     url($path+'GilroyUltraLightItalic.woff') format('woff'),
+//     url($path+'GilroyUltraLightItalic.ttf') format('truetype'),
+//     url($path+'GilroyUltraLightItalic.svg#GilroyUltraLightItalic') format('svg');
+//     font-weight: 200;
+//     font-style: italic;
+// }
+
+
+
+
+
+
+
+
+// --1Isadora_M_Bold--
+// @font-face {
+//   font-family: '1Isadora_M_Bold';
+//   src: url($path+'1Isadora_M_Bold.eot');
+//   src: url($path+'1Isadora_M_Bold.eot') format('embedded-opentype'),
+//        url($path+'1Isadora_M_Bold.woff2') format('woff2'),
+//        url($path+'1Isadora_M_Bold.woff') format('woff'),
+//        url($path+'1Isadora_M_Bold.ttf') format('truetype'),
+//        url($path+'1Isadora_M_Bold.svg#1Isadora_M_Bold') format('svg');
+// }
+
+
+// --MuseoCyrl500--
+// @font-face {
+//     font-family: 'MuseoCyrl500';
+//     src: url($path+'MuseoCyrl500.eot');
+//     src: url($path+'MuseoCyrl500.eot') format('embedded-opentype'),
+//          url($path+'MuseoCyrl500.woff2') format('woff2'),
+//          url($path+'MuseoCyrl500.woff') format('woff'),
+//          url($path+'MuseoCyrl500.ttf') format('truetype'),
+//          url($path+'MuseoCyrl500.svg#MuseoCyrl500') format('svg');
+// }
+
+// --archive--
+// @font-face {
+//     font-family: 'archive';
+//     src: url($path+'archive.eot');
+//     src: url($path+'archive.eot') format('embedded-opentype'),
+//          url($path+'archive.woff2') format('woff2'),
+//          url($path+'archive.woff') format('woff'),
+//          url($path+'archive.ttf') format('truetype'),
+//          url($path+'archive.svg#archive') format('svg');
+// }
+
+
+// --Verdana--
+@font-face {
+    font-family: 'Verdanabold';
+    font-weight: bold;
+    src: url($path+'Verdanabold.eot');
+    src: url($path+'Verdanabold.eot') format('embedded-opentype'),
+         url($path+'Verdanabold.woff2') format('woff2'),
+         url($path+'Verdanabold.woff') format('woff'),
+         url($path+'Verdanabold.ttf') format('truetype'),
+         url($path+'Verdanabold.svg#Verdanabold') format('svg');
+}
+@font-face {
+    font-family: 'Verdanaregular';
+    src: url($path+'Verdanaregular.eot');
+    src: url($path+'Verdanaregular.eot') format('embedded-opentype'),
+         url($path+'Verdanaregular.woff2') format('woff2'),
+         url($path+'Verdanaregular.woff') format('woff'),
+         url($path+'Verdanaregular.ttf') format('truetype'),
+         url($path+'Verdanaregular.svg#Verdanaregular') format('svg');
+}
+
+// --Days--
+// @font-face {
+//     font-family: 'Days';
+//     src: url($path+'Days.eot');
+//     src: url($path+'Days.eot') format('embedded-opentype'),
+//          url($path+'Days.woff2') format('woff2'),
+//          url($path+'Days.woff') format('woff'),
+//          url($path+'Days.ttf') format('truetype'),
+//          url($path+'Days.svg#Days') format('svg');
+// }
+
+
+
+// --Open Sans--
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 300;
+//   src: url($path+'open-sans-v14-latin_cyrillic-300.eot'); 
+//   src: local('Open Sans Light'), local('OpenSans-Light'),
+//        url($path+'open-sans-v14-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300.woff2') format('woff2'),
+//        url($path+'open-sans-v14-latin_cyrillic-300.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: italic;
+//   font-weight: 300;
+//   src: url($path+'open-sans-v14-latin_cyrillic-300italic.eot'); 
+//   src: local('Open Sans Light Italic'), local('OpenSans-LightItalic'),
+//        url($path+'open-sans-v14-latin_cyrillic-300italic.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300italic.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300italic.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300italic.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-300italic.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url($path+'open-sans-v14-latin_cyrillic-regular.eot'); 
+//   src: local('Open Sans Regular'), local('OpenSans-Regular'),
+//        url($path+'open-sans-v14-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-regular.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-regular.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-regular.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-regular.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url($path+'open-sans-v14-latin_cyrillic-italic.eot'); 
+//   src: local('Open Sans Italic'), local('OpenSans-Italic'),
+//        url($path+'open-sans-v14-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-italic.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-italic.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-italic.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-italic.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: italic;
+//   font-weight: 600;
+//   src: url($path+'open-sans-v14-latin_cyrillic-600italic.eot'); 
+//   src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'),
+//        url($path+'open-sans-v14-latin_cyrillic-600italic.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600italic.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600italic.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600italic.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600italic.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 600;
+//   src: url($path+'open-sans-v14-latin_cyrillic-600.eot'); 
+//   src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+//        url($path+'open-sans-v14-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-600.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: italic;
+//   font-weight: 700;
+//   src: url($path+'open-sans-v14-latin_cyrillic-700italic.eot'); 
+//   src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'),
+//        url($path+'open-sans-v14-latin_cyrillic-700italic.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700italic.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700italic.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700italic.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700italic.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url($path+'open-sans-v14-latin_cyrillic-700.eot'); 
+//   src: local('Open Sans Bold'), local('OpenSans-Bold'),
+//        url($path+'open-sans-v14-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-700.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 800;
+//   src: url($path+'open-sans-v14-latin_cyrillic-800.eot'); 
+//   src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+//        url($path+'open-sans-v14-latin_cyrillic-800.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800.svg#OpenSans') format('svg'); 
+// }
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: italic;
+//   font-weight: 800;
+//   src: url($path+'open-sans-v14-latin_cyrillic-800italic.eot'); 
+//   src: local('Open Sans ExtraBold Italic'), local('OpenSans-ExtraBoldItalic'),
+//        url($path+'open-sans-v14-latin_cyrillic-800italic.eot?#iefix') format('embedded-opentype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800italic.woff2') format('woff2'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800italic.woff') format('woff'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800italic.ttf') format('truetype'), 
+//        url($path+'open-sans-v14-latin_cyrillic-800italic.svg#OpenSans') format('svg'); 
+// }
