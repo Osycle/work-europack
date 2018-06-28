@@ -15,25 +15,6 @@
 
 
 
-
-
-
-
-
-
-
-
-@mixin modal-center($width, $height: false) {
-	width: $width;
-	margin-left: -+($width/2);
-  left: 50%;
-  if $height{
-		height: $height;
-		margin-top: -+($height/2);
-		top: 50%;
-  }
-}
-
 @mixin img-flex-align( $align: center, $mheight: 0, $tag: ".img-content" ) {
 
 	#{$tag}{

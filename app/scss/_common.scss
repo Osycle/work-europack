@@ -294,6 +294,24 @@ table {
 .hover-color-3 a:hover{color: $color-3;}
 .hover-color-4 a:hover{color: $color-4;}
 
+.hover-style-1{
+	transition: all 0.3 ease;
+	box-shadow: inset 0 0 0px black, 0px 0px 0px 0px darken(white, 12%), 0px 0px 0px 0px $color-2;
+	&:hover{
+		filter: brightness(105%);
+		box-shadow: inset 0 0 5px black, -5px -5px 0px 0px darken(white, 12%), 5px 5px 0px 0px $color-2;
+		border-radius: 0px;
+	}
+}
+.hover-style-2{
+	transition: all 0.3 ease;
+	box-shadow: inset 0 0 0px black, 0px 0px 0px 0px darken(white, 12%), 0px 0px 0px 0px $color-2;
+	&:hover{
+		filter: brightness(105%);
+		box-shadow: inset 0 0 0px black, -5px -5px 0px 0px darken(white, 12%), 5px 5px 0px 0px $color-2;
+		border-radius: 0px;
+	}
+}
 
 .hover-underline a:hover{text-decoration: underline;}
 
@@ -357,12 +375,9 @@ table {
 
 [class*="boxes"]{	
 	//text-align: center;
-	&:not(.boxes-nosub)>div, &>figure{
+	&:not(.boxes-nosub)>.boxes-cell, &>figure{
 		display: inline-table;
 		vertical-align: top;
-		.img-content {
-
-		}
 		@include img-auto-adaptive();
 		img:not([width]){
 			width: 100%;
@@ -487,6 +502,7 @@ table {
 
 .btn-def, .btn-icon{
 	@extend .btn-style;
+	@extend .hover-style-1;
 	color: white;
 	transition: all 0.3s ease-in-out;
 	*{
@@ -495,9 +511,7 @@ table {
 	&:not([class*="bg-color"]){
 		background-color: $color-1;
 	}
-	&:hover{
-		filter: brightness(105%);
-	}
+
 	&.radius{
 		border-radius: 20px;
 	}
@@ -513,6 +527,7 @@ table {
 
 .btn-opacity{
 	@extend .btn-style;
+	@extend .hover-style-2;
 	background-color: transparent;
 	border: 1px solid currentColor;
 	color: currentColor;
@@ -520,9 +535,9 @@ table {
 	a{
 		transition: none !important;
 	}
+	box-shadow: inset 0 0 0px black, 0px 0px 0px 0px darken(white, 12%), 0px 0px 0px 0px $color-2;
 	&:hover{
 		border-color: $color-1;
-		color: $color-1;
 	}
 	&.reverse{
 		border-color: black;
@@ -727,17 +742,14 @@ h1, h2, h3, h4{
 	font-family: $font-family-2;
 }
 h1{
-	@extend .h1-style;
 	position: relative;
 	font-weight: 700;	
 	font-size: em(30, 16);
 	text-transform: uppercase;
-	padding-bottom: 15px;
 	margin-bottom: 15px;
 	line-height: 125%;
 }
 h2{
-	@extend .h1-style;
 	position: relative;
 	font-weight: 600;
 	font-size: em(26, 16);
@@ -746,7 +758,6 @@ h2{
 	margin-bottom: 15px;
 } 
 h3{
-	@extend .h1-style;
 	position: relative;
 	font-weight: 600;
 	padding-bottom: 15px;
@@ -819,8 +830,8 @@ main{
 	background-color: white;
 	color: black;
 	p{
-		line-height: 145%;
-		font-size: 0.95em;
+		line-height: 170%;
+		font-size: 0.98em;
 	}
 	.parag-gray{
 		p{

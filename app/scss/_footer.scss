@@ -29,6 +29,15 @@
 	}
 }
 .footer-menu{
+	@extend .hover-underline;
+	h4{
+		transition: .3s ease;
+	}
+	&:hover{
+		h4{
+			color: lighten($color-1, 35%);
+		}
+	}
 	li{
 		margin-left: 5px;
 		margin-right: 5px;
@@ -51,14 +60,26 @@
 		margin-right: 3px;
 	}
 	a{
-		border: 1px solid transparent;
-		padding: 6px;
-		width: 35px;
-		height: 35px;
+		border: 1px solid $color-1;
+		border-radius: 50%;
+		transition: 0.3s ease;
+		padding: ((30-18)/4)+px 0;
+		width: 30px;
+		background-color: white;
+		color: $color-1;
+		height: 30px;
 		display: block;
 		font-size: 18px;
 		&:hover{
-			border-color: white;
+			border-color: lighten($color-1,35%);
+			background-color: lighten($color-1,35%);
+		}
+		i{
+			vertical-align: baseline;
+		}
+		.fa-paper-plane{
+			font-size: 16px;
+			margin-left: -2px;
 		}
 	}
 }

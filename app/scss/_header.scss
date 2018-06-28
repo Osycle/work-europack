@@ -7,9 +7,9 @@
 										 ---HEADER---
 */
 
-$header-top-height: 110px; 
+$header-top-height: 120px; 
 $header-middle-height: 90px; 
-$header-bottom-height: 90px;
+$header-bottom-height: 70px;
 $header-min-menu: 70px;
 #header{
 	top: 0;
@@ -18,7 +18,7 @@ $header-min-menu: 70px;
 	left: 0;
 	position: fixed;
 	pointer-events: none;
-	background-color: transparent !important;
+	background-color: transparent;
 	@media (max-width: 991px){
 		position: fixed;
 	}
@@ -27,7 +27,6 @@ $header-min-menu: 70px;
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}
-	border: 1px solid rgba($color-gray-1, 0.5);
 }
 header{
 	*{
@@ -36,40 +35,42 @@ header{
 }
 .header-hidden{
 	//position: relative;
-	height: $header-top-height;
+	height: 206px;
 	background-color: #fafafa;
-	display: none;
+	transition: height 0.3s ease-in-out 0.4s;
+	//display: none;
 	@media ( max-width: 991px ){
-		height: 100px;
+		height: 70px;
 	}
 }
 .header-top-content, .header-bottom-content{
-	transition: all 0.3s ease-out 0.0s, visibility 0.0s ease 0s;
+	transition: all 0.5s ease 0.0s;
 	transform: inherit;transform: unset;
+	background-color: white;
 }
 .header-top-content{
-	background-color: white;
+	transform-origin: 50% 0;
+	header-top-content: 206px;
 }
 .header-bottom-content{
-	background-color: white;
+	position: relative;
+	top: 0px;
+	transform: inherit;transform: unset;
+
 }
 .header-scroll{
-
 	.menu, .menu .phones, .desc-content, .img-content, img{
-		transition: all 0.35s ease-out; 
+		transition: all 0.3s ease; 
 	}
-	// &.scrolled, &.header-pages{
-	// 	.header-top-content{
-	// 		//top: -60px;
-	// 		border-radius: 0 0 3px 3px;
-	// 		//transform: perspective(1800px) rotateX(-90deg);	
-	// 		transform-origin: 50% 0;
-	// 		box-shadow: 0px 5px 20px -10px black;
-	// 		.menu{
-	// 			height: $header-top-height/2;
-	// 		}
-	// 	}
-	// }
+	&.scrolled, &.header-pages{
+		.header-top-content{
+			transform: perspective(1500px) rotateX(90deg);	
+		}
+		.header-bottom-content{
+			top: -136px;
+			box-shadow: 0px 5px 20px -10px black;
+		}
+	}
 
 
 }
@@ -204,7 +205,22 @@ header{
 		transform: matrix(1,0,0,1, 10,0);
 	}
 }
-*
+.header-lang{
+	li{
+		margin-bottom: 5px;
+		&:hover{color: darken($color-1, 10%);}
+	}
+	.active{
+		color: $color-1;
+	}
+	.img-link{
+		filter: brightness(100%);
+		transition: 0.2s ease;
+		&:hover{
+			filter: brightness(120%);
+		}
+	}
+}
 
 
 
@@ -254,10 +270,11 @@ header{
     opacity: 0.05;
 	}
 	.min-menu-logo{
-		padding: 20px 0;
+		padding: 10px 0;
 		width: 100%;
-		img{
-			width: 87px;
+		.img{
+			background-size: contain;
+			height: 50px;
 		}
 	}
 	.min-menu-bar{
@@ -274,6 +291,10 @@ header{
 	.min-menu-header{
 		opacity: 0 ;
 		top: -200px;
+	}
+	.header-hidden{
+		height: 0;
+		transition: height 0.3s ease-in-out 0.0s;
 	}
 }
 

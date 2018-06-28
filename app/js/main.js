@@ -157,7 +157,7 @@
         initialIndex: 0,
         friction: 1,
         selectedAttraction: 1,
-        prevNextButtons: false,
+        prevNextButtons: true,
         draggable: false,
         wrapAround: true,
         pageDots: false,
@@ -363,12 +363,12 @@
     $(window).on("scroll", function(e) {
 
       //Адаптация хедера при скролинге
-      if ($(window).scrollTop() > 100 && headerRange == false) {
+      if ($(window).scrollTop() > 270 && headerRange == false) {
 
         headerRange = true;
         if (minMenu) minMenu.addClass("scrolled").addClass("down");
 
-      } else if ($(window).scrollTop() < 100 && headerRange == true) {
+      } else if ($(window).scrollTop() < 270 && headerRange == true) {
         headerRange = !true;
         if (minMenu) minMenu.removeClass("scrolled");
       } //.originalEvent.wheelDelta
