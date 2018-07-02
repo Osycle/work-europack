@@ -68,6 +68,7 @@
 		}
 		opacity: 0;
 		&.is-selected{
+			z-index: 1;
 			opacity: 1;
 			.img{
 				filter: blur(0);
@@ -103,6 +104,13 @@ input[type='radio']{
 	&:checked ~ label .radio-circle{
 		background-color: $color-1;
 	}
+	&:disabled ~ label{
+		opacity: 0.3;
+		&:hover{
+			cursor: default;
+		}
+	}
+
 }
 label{
 	font-weight: 500;
@@ -118,4 +126,34 @@ label{
 			border-color: $color-1;
 		}
 	}
+}
+
+
+
+
+.buildpack-summary{
+	.img-content{
+		.img{
+			height: 300px;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+	.summary-item{
+		margin: 10px 0;
+		display: flex;
+		flex: 1 1 50%; 
+		flex-direction: row;
+		span{
+			width: 100%;
+		}
+	}
+	.summary-header{
+	}
+	.summary-value{
+	}
+}
+.not-filled{
+	opacity: 0.3;
+	pointer-events: none;
 }

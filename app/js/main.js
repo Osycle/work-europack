@@ -359,7 +359,6 @@
     //SCROLL
     var minMenu = $(".header-scroll") || null;
     var headerRange = false;
-    var counterAnimateContainer = $(".counter-animate-container") || null;
     $(window).on("scroll", function(e) {
 
       //Адаптация хедера при скролинге
@@ -389,167 +388,47 @@
 
 
 
+    //Проверка на заполнения полей радио кнопок
+    var inputFilledContent = $("[data-input-filled='content']");
+    inputFilledContent
+      .find("[data-input-filled]:not([data-input-filled='1'])")
+      .addClass("not-filled")
+      .find("input")
+      .attr("disabled", "disabled");
 
+    inputFilledContent.map(function(i, el){
+      var currentCnt;
+      el = $(el);
+      el.find("[data-input-filled] input").on("change", function(){
+        if( !this.checked )
+          return;
+      currentCnt = $(this).closest("[data-input-filled]").attr("data-input-filled")*1;
 
+      var nextInput = el.find("[data-input-filled='"+(++currentCnt)+"']")
+      nextInput.removeClass("not-filled").find("input[disabled]").removeAttr("disabled");
+      })      
+    })
 
+    //
+    $("#buildpack-item-1 input").on("change", function(){
+      var self = $(this);
+      var inputName = self.attr("data-input-name");
+      var inputTitle = self.attr("data-input-title");
+      var inputDesc = self.attr("data-input-desc");
+      var inputValue = self.attr("data-input-value");
 
+      var containerContent = $(".summary-items");
 
-
-
-
-    //Const Animation
-    if( $(".const-animation").length )
-      (function($){
-
-        var tlTruck_1 = new TimelineMax({ 
-          repeat: -1,
-          paused: true
-        });
-        var tlTruck_2 = new TimelineMax({ 
-          repeat: -1, 
-          paused: true
-        });
-        var containerAnimation = $(".const-animation") || null;
-        var countainerWidth = containerAnimation.width();
-
-        var truck_1 = $(".truck-1").eq(0); // 1 грузовик
-        var truck_2 = $(".truck-2").eq(0); // 2 грузовик
-        
-        //Анимация 1 грузовика
-        tlTruck_1.fromTo( truck_1, 36, {left: -134, y: 0, ease: "linear"},  {left: countainerWidth, y: 0, ease: "linear"}, "truck-1" ).addCallback(function(){
-          soundtlTruck_1.play();
-        })
-        // Анимация 2 грузовика
-        tlTruck_2.fromTo( truck_2, 43, {right: -94, y: 0, ease: "linear"},  {right: countainerWidth, y: 0, ease: "linear"} ).addCallback(function(){
-          soundtlTruck_2.play();
-        })
-        //Убавление звука при прокрутке
-        $(window).on("scroll", function(){
-          fadeScrollAudio( containerAnimation );
-        })
-
-        $(document).on("click", ".truck-1", function(){
-          if( !soundtlTruckSignal_1.playStatus ){
-            soundtlTruckSignal_1.play();
-            soundtlTruck_1.stop();
-            tlTruck_1.stop();
-
-            setTimeout(function(){
-                soundtlTruck_1.play();
-                tlTruck_1.play();
-            }, 3000)
-          }
-        })
-        $(document).on("click", ".truck-2", function(){
-          if( !soundtlTruckSignal_2.playStatus ){
-            soundtlTruckSignal_2.play();
-            soundtlTruck_2.stop();
-            tlTruck_2.stop();
-
-            setTimeout(function(){
-                soundtlTruck_2.play();
-                tlTruck_2.play();
-            
-            }, 3000)
-          }
-        })
-
-
-
-        //HOWL
-        Howler.volume(0.0);
-        window.soundWindcity = new Howl({
-          src: ['img/const-animation/sounds/windcity-1.mp3'],
-          autoplay: false,
-          volume: 1,
-          onload: function(){
-            this.play();
-            this.loop(true);
-          },
-          onend: function() {}
-        });
-        var soundtlTruck_1 = new Howl({
-          src: ['img/const-animation/sounds/truck-2-35.mp3'],
-          autoplay: false,
-          volume: 0.7,
-          onload: function(){
-            this.play(); //howl play        
-            tlTruck_1.play();//gsap PLAY
-          },
-          onend: function() {}
-        });
-        var soundtlTruck_2 = new Howl({
-          src: ['img/const-animation/sounds/truck-5-42.mp3'],
-          autoplay: false,
-          volume: 0.4,
-          onload: function(){
-            this.play(); //howl play        
-            tlTruck_2.play();//gsap PLAY
-          },
-          onend: function() {}
-        });
-        var soundtlTruckSignal_1 = new Howl({
-          src: ['img/const-animation/sounds/truck-4-2.mp3'],
-          autoplay: false,
-          volume: 0.1,
-          rate: 0.9,
-          pool: 5,
-          playStatus: false,
-          onload: function(){},
-          onplay: function(){
-            var that = this;
-            this.playStatus = true;
-            setTimeout(function(){
-              that.playStatus = false;
-            }, 2000)
-          },
-          onend: function() {}
-        });
-        var soundtlTruckSignal_2 = new Howl({
-          src: ['img/const-animation/sounds/truck-4-2.mp3'],
-          autoplay: false,
-          volume: 0.05,
-          rate: 0.9,
-          playStatus: false,
-          onload: function(){},
-          onplay: function(){
-            var that = this;
-            this.playStatus = true;
-            setTimeout(function(){
-              that.playStatus = false;
-            }, 2000)
-          },
-          onend: function() {}
-        });
-        
-        function fadeScrollAudio( el ){
-          var el = $(el);
-          var docViewTop = $(window).scrollTop(),
-              docViewBottom = docViewTop + $(window).height(),
-              elTop = el.offset().top,
-              elBottom = elTop + el.height() / 1.5;
-          var persentElTop = (elTop-100)/100
-          var persentdocViewTop = docViewTop/persentElTop << 0;
-          var volume = persentdocViewTop/50-1;
-          var visionDisplay = elBottom <= docViewBottom && elTop >= docViewTop;
-          if( volume > 1 || visionDisplay )
-            volume = 1;
-          Howler.volume( roundFix(volume, 2) );
-          //console.log( roundFix(persentdocViewTop/50+1, 2), persentdocViewTop/50+1, volume+2 )
-          console.log( volume )
-        }
-      })($);
-
-
-
-
-
-
-
-
-
-
-
+      var content =       '<div class="summary-item '+inputName+'">'+
+                            '<span class="summary-title"><b>'+inputTitle+'</b></span>'+
+                            '<span class="summary-desc">'+inputDesc+'</span>'+
+                          '</div>';
+      if( !containerContent.children().hasClass(inputName) )
+        containerContent.append( content );
+      else
+        containerContent.find("."+inputName+" .summary-value").text(inputValue);
+      console.log(self.siblings(".summary-content .summary-item"))
+    })
 
 
 
@@ -561,30 +440,6 @@
 
     //Preloader
     window.preLoader = {
-      preBox: ".pre-box",
-      enter: false,
-      status: $(".pre-box").hasClass("in"),
-
-      preToggle: function(bool, func) {
-        var endtime = 600;
-        if (!this.enter) return;
-        if (typeof func === "function")
-          setTimeout(function() {
-            func();
-          }, endtime);
-        var preBox = $(this.preBox);
-
-        bool || this.status ?
-          preBox.removeClass("in").setTimeout(function() {
-            $(preBox).hide();
-          }, endtime) :
-          preBox
-          .show()
-          .addClass("in")
-          .find(".box-content");
-
-        return (this.status = !this.status);
-      },
 
       preImg: function(img) {
         var images = img || document.images,
