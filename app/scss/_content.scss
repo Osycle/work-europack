@@ -31,7 +31,7 @@
 			}
 		}
 	}
-	button{		
+	button{
     color: $color-1;
     padding: 5px 10px;
     position: absolute;
@@ -156,4 +156,141 @@ label{
 .not-filled{
 	opacity: 0.3;
 	pointer-events: none;
+}
+
+
+/* --services */
+
+.services-items{
+	figure{
+		position: relative;
+		overflow: hidden;
+		h2{
+			margin: 0;
+			padding: 0;
+			font-size: 24px;
+		}
+		.img{
+			height: 240px;
+			transition: all 0.5s ease-in-out;
+		}
+		.desc-content{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			width: 100%;
+		}
+		&:nth-child(2n+1){
+			.entry{
+				background-color: rgba($color-1, 0.8);
+			}
+		}
+		&:nth-child(2n){
+			.entry{
+				background-color: rgba($color-2, 0.8);
+			}
+		}
+		&:hover{
+			.img{
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+/* --services-article */
+.services-article{
+	.img-main{
+		@media (min-width: 992px) {
+			max-width: 50%;
+		}
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+}
+/* --about */
+.about-numbers{
+	h2{
+		margin: 0;
+	}
+	h1{
+		color: $color-1;
+		margin: 0;
+		font-size: 50px;
+	}
+	p{
+		color: $color-1;
+	}
+	.boxes-cell{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+.advantages{
+	.boxes-cell{
+		position: relative;
+	}
+	.desc-content{
+		height: 150px;
+	}
+	.counter{
+		opacity: 0.1;
+		font-size: 120px;
+	}
+	p{
+		font-weight: 400;
+	}
+}
+
+/* --contacts */
+.contacts{
+	input{
+		text-align: center;
+	}
+	textarea{
+		text-transform: none;
+		height: 200px;
+		padding: 15px;
+	}
+	textarea, input{
+		border-color: rgba(black, 0.1);
+	}
+	button{
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	.btn-def{
+		transition: all 0.3s ease-in-out; 
+	}
+	@media (max-width:991px){
+		.p-r-60{
+			padding-right: 0;
+		}
+	}
+}
+
+/* --productions */
+.productions-other{
+	.item{
+		border-right: 1px solid $color-2;
+		&:nth-last-child(1){
+			border: 0;
+		}
+	}
+	.active{
+		font-weight: 700;
+	}
+}
+
+.productions-items{
+	figure{
+		border: 1px solid $color-2;
+		padding-right: 5px;
+		padding-left: 5px;
+		padding-bottom: 30px;
+		.img{
+			height: 200px;
+		}
+	}
 }

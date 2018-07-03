@@ -614,6 +614,9 @@ html{
 .inline-block{
 	display: inline-block;
 }
+.flex{
+	display: flex;
+}
 .li-inline-block{
 	li{
 		display: inline-block;
@@ -647,6 +650,26 @@ html{
 	position: relative;
 }
 
+.trans-v-center, .trans-center{
+	top: 50%;
+}
+.trans-h-center, .trans-center{
+	left: 50%;
+}
+.trans-v-center, .trans-h-center, .trans-center{
+	position: absolute;	
+}
+.trans-h-center{
+	transform: translateY(-50%);
+}
+.trans-v-center{
+	transform: translateX(-50%);
+}
+.trans-center{
+	transform: translate(-50%, -50%);
+}
+
+
 
 img[align="right"], img[align="left"], figure[align="right"], figure[align="left"]{
 	&:first-child{
@@ -672,37 +695,37 @@ img[auto]{
 	resize: none;
 }
 
-.bs-cover{ 
+.bg-size-cover{ 
 	background-size: cover; 
 }
-.bs-contain{ 
+.bg-size-contain{ 
 	background-size: contain;
 }
-.bp-left{
+.bg-position-left{
 	background-position: left;
 }
-.bp-left-top{
+.bg-position-left-top{
 	background-position: left top;
 }
-.bp-left-bottom{
+.bg-position-left-bottom{
 	background-position: left center;
 }
-.bp-right{
+.bg-position-right{
 	background-position: right;
 }
-.bp-right-top{
+.bg-position-right-top{
 	background-position: right top;
 }
-.bp-right-bottom{
+.bg-position-right-bottom{
 	background-position: right center;
 }
-.bp-center{
+.bg-position-center{
 	background-position: center;
 }
-.bp-center-top{
+.bg-position-center-top{
 	background-position: center top;
 }
-.bp-center-bottom{
+.bg-position-center-bottom{
 	background-position: center center;
 }
 .font-size-1{font-size: 0.9em;}

@@ -354,8 +354,6 @@
 
 
 
-
-
     //SCROLL
     var minMenu = $(".header-scroll") || null;
     var headerRange = false;
