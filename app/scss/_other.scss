@@ -86,8 +86,45 @@ html body{
 		outline: 0;
 	}
 }
+.fancybox-infobar__body, .fancybox-button{
+	background-color: rgba($color-1, 0.6);
+}
+.fancybox-button:hover:not([disabled]){
+	background-color: rgba($color-2, 0.8);
+}
+.fancybox-bg{
+	background-color: rgba(white, 0.8);
+	&:before{
+		@extend .claf;
+		background-color: rgba($color-1, 0.6);
+		transform: translate(-100%, -100%);
+	}
+	&:after{
+		@extend .claf;
+		background-color: rgba($color-2, 0.6);
+		transform: translate(100%, 100%);
+	}
 
+}
+.fancybox-is-open{
+	.fancybox-bg{
+		background-color: rgba(white, 0.8);
+		&:before, &:after{
+			transition: all 0.8s ease;
+		}
+		&:before{
+			@extend .claf;
+			background-color: rgba($color-1, 0.6);
+			transform: translate(-25%, -25%);
+		}
+		&:after{
+			@extend .claf;
+			background-color: rgba($color-2, 0.6);
+			transform: translate(25%, 25%);
+		}
 
+	}
+}
 
 
 
@@ -328,7 +365,11 @@ html body{
 /* ---- .grid-item ---- */
 
 .grid-img-sizer, .grid-img-item {
-  width: (100/4)+%;
+  width: (100/5)+%;
+  float:left;
+  img{
+  	width: 100%;
+  }
 }
 
 .grid-img-item {

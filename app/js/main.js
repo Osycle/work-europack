@@ -38,9 +38,12 @@
       html: true
     });
     /*FANCYBOX*/
-    if ($("[data-fancybox='gallery']").length != 0)
-      $("[data-fancybox='gallery']").fancybox({
+    if ($("[data-fancybox]").length != 0)
+      $("[data-fancybox]").fancybox({
         afterShow: function(instance, current) {},
+        animationEffect : "zoom",
+        animationDuration : 800,
+        transitionDuration : 366,
         transitionEffect: "zoom-in-out"
       });
     /*ELEVATEZOOM*/
@@ -171,96 +174,27 @@
 
 
 
-    /*short-productions-carousel*/
-    if( $(".short-productions-carousel .carousel-items figure").length >= 3  ){
-      $(".short-productions-carousel .carousel-items").flickity({
-        imagesLoaded: true,
-        autoPlay: false,
-        pauseAutoPlayOnHover: true,
-        arrowShape: arrowStyle,
-        initialIndex: 0,
-        friction: 1,
-        selectedAttraction: 1,
-        prevNextButtons: false,
-        draggable: false,
-        wrapAround: true,
-        pageDots: false,
-        contain: false,
-        percentPosition: true,
-        cellSelector: checkSm() ? 'figure' : '.carousel-cell',
-        cellAlign: "center"
-      });
-      var shortProductionsCarousel = flickityPrevNext(".short-productions-carousel", ".short-productions .carousel-prev-next" );
-      shortProductionsCarousel.on("select.flickity", function(p1, p2){
-        !checkSm()  ? flickityCounter(".short-productions .carousel-prev-next", ".carousel-cell") 
-                    : flickityCounter(".short-productions .carousel-prev-next", ".short-productions figure");
-      })
-      !checkSm()  ? flickityCounter(".short-productions .carousel-prev-next", ".carousel-cell") 
-                  : flickityCounter(".short-productions .carousel-prev-next", ".short-productions figure");      
-    }
-
 
 
     /*short-news-carousel*/
-    if( $(".short-news-carousel .carousel-items").length )
-      var $shortNewsCarousel = $(".short-news-carousel .carousel-items").flickity({
+    if( $(".short-partners-carousel .carousel-items figure").length )
+      $(".short-partners-carousel .carousel-items").flickity({
         imagesLoaded: true,
-        autoPlay: false,
+        autoPlay: 2500,
         pauseAutoPlayOnHover: true,
         arrowShape: arrowStyle,
         initialIndex: 0,
         //friction: 1,
         //selectedAttraction: 1,
-        prevNextButtons: false,
+        prevNextButtons: true,
         draggable: checkSm(),
-        wrapAround: true,
+        wrapAround: false,
         pageDots: false,
         contain: false,
         percentPosition: true,
         cellSelector: 'figure',
         cellAlign: "center"
       });
-    $('.short-news .button-carousel-nav').on( 'click', 'li', function() {
-      var index = $(this).index();
-      $shortNewsCarousel.flickity( 'select', index );
-    });
-
-
-
-
-    /* reviews carousel */
-    //if( $(".short-reviews-carousel .carousel-items").length )
-      var shortReviewsCarousel = $(".reviews-carousel .carousel-items").flickity({
-        imagesLoaded: true,
-        autoPlay: false,
-        pauseAutoPlayOnHover: true,
-        arrowShape: arrowStyle,
-        initialIndex: 0,
-        //friction: 1,
-        //selectedAttraction: 1,
-        prevNextButtons: false,
-        draggable: checkSm(),
-        wrapAround: true,
-        pageDots: false,
-        contain: false,
-        percentPosition: true,
-        cellSelector: 'figure',
-        cellAlign: "center"
-      });
-      if( $('.reviews-carousel .button-carousel-nav').length ){
-        $('.reviews-carousel .button-carousel-nav').on( 'click', 'li', function() {
-          var index = $(this).index();
-          shortReviewsCarousel.flickity( 'select', index );
-        });
-        var progressBar = $(".progress-bar") || null ;
-        var flkty = shortReviewsCarousel.data("flickity");
-        flkty.on( 'scroll', function( progress ) {
-          progress = Math.max( 0, Math.min( 1, progress ) );
-          console.log( progress )
-          progressBar[0].style.width = progress * 100 + '%';
-        });
-      }
-
 
 
 
