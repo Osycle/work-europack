@@ -659,10 +659,10 @@ html{
 .trans-v-center, .trans-h-center, .trans-center{
 	position: absolute;	
 }
-.trans-h-center{
+.trans-v-center{
 	transform: translateY(-50%);
 }
-.trans-v-center{
+.trans-h-center{
 	transform: translateX(-50%);
 }
 .trans-center{
