@@ -383,90 +383,140 @@
 
 
 
+		window.buildpack = {
+			paperOptions: {},
+			currentData: {
+				inputName: "",
+				title: "",
+				desc: ""
+			},
+			customsize: {},
+			update: function(){
+				this.paperOptions.paper = this.currentData.paper || this.paperOptions.paper;
+				this.paperOptions.handle = this.currentData.handle || this.paperOptions.handle;
+				this.paperOptions.size = this.currentData.size || this.paperOptions.size;
+				this.paperOptions.stamp = this.currentData.stamp || this.paperOptions.stamp;
+				console.log(this.currentData);
+			},
+			appendInSummary: function (){
+				var containerContent = $(".summary-items");
+				console.log(this)
+				var inputName = this.currentData.inputName;
+				var title = this.currentData.title;
+				var desc = this.currentData.desc;
+				var content =       '<div class="summary-item '+inputName+'">'+
+															'<span class="summary-title"><b>'+title+'</b></span>'+
+															'<span class="summary-desc">'+desc+'</span>'+
+														'</div>';
 
-
-		var currentPaperOptions = {};
-		var customsize = {};
-		$("#buildpack-item-1 input").on("change", function(){
-			var self = $(this);
-			var inputData = self.attr("data-input");
-		 if (inputData)
-			inputData = JSON.parse(inputData);
-			 
-
-			var sizeField = self[0].hasAttribute("data-size-field");
-			if( sizeField ){
-				if( isNaN(self.val()*1) ){
-					self.val("");
-					return;
+				if( !containerContent.children().hasClass(this.currentData.inputName) )
+					containerContent.append( content );
+				else
+					containerContent.find("."+this.currentData.inputName+" .summary-desc").text(this.currentData.desc);
+			},
+			changeImage: function(){
+				var paper = [this.paperOptions.paper, this.paperOptions.handle, this.paperOptions.size];
+				paper = paper.filter(function(arr) {
+					return arr !== undefined && arr !== null; 
+				});
+				var imgName = "";
+				for (var i = 0; i < paper.length; i++) {
+					i != 0 ? imgName += "-"+paper[i] : imgName += paper[i];
 				}
-
-				//Убираем отметку на фиксированных размеров
-				if( $("[name='buildpack-item-1-size']:checked").length != 0){
-					$("[name='buildpack-item-1-size']:checked")[0].checked = false;
-				}
-
-
-				var height = self.filter("[data-size-field='height']").val();
-				var width = self.filter("[data-size-field='width']").val();
-				var weight = self.filter("[data-size-field='weight']").val();
-
-				customsize.height = height || customsize.height || "_";
-				customsize.width = width || customsize.width || "_";
-				customsize.weight = weight || customsize.weight || "_";
-
-				var customsizeValue = customsize.height+"x"+customsize.width+"x"+customsize.weight;
-
-				inputData.desc = customsizeValue;
-				inputData.size = customsizeValue;
-
+				var index = $("[data-buildpack-image*='"+imgName+"']").eq(0).index();
+				buildPackCrousel.flickity( 'select', index );
+				//console.log(imgName, el);
 			}
+
+
+		}
+
+
+		$("[data-buildpack-event='radio']").on("change", function(){
+			var self = $(this);
 
 			//Убираем отметку на фиксированных размеров
 			if( $("[name='buildpack-item-1-size']:checked").length != 0){
 				$("[name='buildpack-item-1-customsize']").val("");
 			}
 
-			var containerContent = $(".summary-items");
-			var content =       '<div class="summary-item '+inputData.inputName+'">'+
-														'<span class="summary-title"><b>'+inputData.title+'</b></span>'+
-														'<span class="summary-desc">'+inputData.desc+'</span>'+
-													'</div>';
+			buildpack.currentData = self.attr("data-input");
+		 	if (buildpack.currentData)
+				buildpack.currentData = JSON.parse(buildpack.currentData);
 
-			if( !containerContent.children().hasClass(inputData.inputName) )
-				containerContent.append( content );
-		 	else
-				containerContent.find("."+inputData.inputName+" .summary-desc").text(inputData.desc);
+			buildpack.appendInSummary();
+			buildpack.update();
 
-			currentPaperOptions.paper = inputData.paper || currentPaperOptions.paper;
-			currentPaperOptions.handle = inputData.handle || currentPaperOptions.handle;
-			currentPaperOptions.size = inputData.size || currentPaperOptions.size;
-			currentPaperOptions.stamp = inputData.stamp || currentPaperOptions.stamp;
+			if( buildpack.currentData.paper || buildpack.currentData.handle || buildpack.currentData.size)
+				buildpack.changeImage();
+			console.log(buildpack.paperOptions);
 
-
-			if( !sizeField )
-				changeImage(currentPaperOptions);
-			console.log(currentPaperOptions);
 		})
 
 
-		function changeImage(currentOptions){
-			var paper = [currentOptions.paper, currentOptions.handle, currentOptions.size];
-			paper = paper.filter(function(arr) {
-				return arr !== undefined && arr !== null; 
-			});
-			var imgName = "";
-			for (var i = 0; i < paper.length; i++) {
-				i != 0 ? imgName += "-"+paper[i] : imgName += paper[i];
-			}
-			var index = $("[data-buildpack-image*='"+imgName+"']").eq(0).index();
-			buildPackCrousel.flickity( 'select', index );
-			//console.log(imgName, el);
+
+ 		var customsize = {};
+		$("[data-buildpack-event='num']").on("change", function(){
+			var self = $(this);
+				if( isNaN(self.val()*1) ){
+					self.val("");
+					return;
+				}
+				if( typeof self.attr("data-input") != "undefined" ){
+					buildpack.currentData = self.attr("data-input");
+			 		if (buildpack.currentData)
+						buildpack.currentData = JSON.parse(buildpack.currentData);
+				}else{
+					console.error("Нужны параметры в атрибуте data-input")
+					return;
+				}
+				
+
+				if( self.filter("[name*='-customsize']").length )
+					customsizeField(self);
+				if( self.filter("[name*='buildpack-item-1-edition']").length )
+					if( self.val() < 5000 ) self.val(5000)
+
+
+				buildpack.currentData.desc = self.val();
+				buildpack.appendInSummary();
+				buildpack.update();
+		})
+		$("[data-buildpack-event='text']").on("change", function(){
+			var self = $(this);
+		})
+
+		
+
+		function customsizeField (){
+					if( $("[name='buildpack-item-1-size']:checked").length != 0){
+						$("[name='buildpack-item-1-size']:checked")[0].checked = false;
+					}
+					var height = self.filter("[data-size-field='height']").val();
+					var width = self.filter("[data-size-field='width']").val();
+					var weight = self.filter("[data-size-field='weight']").val();
+
+					customsize.height = height || customsize.height || "_";
+					customsize.width = width || customsize.width || "_";
+					customsize.weight = weight || customsize.weight || "_";
+					var customsizeValue = customsize.height+"x"+customsize.width+"x"+customsize.weight;
+
+					console.log(customsizeValue);
+
+					buildpack.currentData.desc = customsizeValue;
+					buildpack.currentData.size = customsizeValue;
 		}
 
-		function toggleInputChecked(){
 
-		}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -514,6 +564,22 @@
 			}
 		};
 		preLoader.preImg();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
