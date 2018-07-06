@@ -199,7 +199,7 @@
 		
 		/*buildpack-carousel*/
 		if( $(".buildpack-carousel .carousel-items figure").length )
-			window.buildPackCrousel = $(".buildpack-carousel .carousel-items").flickity({
+			window.buildpackCrousel = $(".buildpack-carousel .carousel-items").flickity({
 				imagesLoaded: true,
 				autoPlay: false,
 				pauseAutoPlayOnHover: true,
@@ -216,7 +216,7 @@
 				cellSelector: 'figure',
 				cellAlign: "center"
 			});
-		buildPackCrousel.flickity( 'select', 1 );
+		buildpackCrousel.flickity( 'select', 1 );
 
 
 
@@ -229,8 +229,13 @@
 			that.addClass("is-selected");
 			that.siblings().removeClass("is-selected");
 		});
-
-
+    //TODO
+    buildpackCrousel.data("flickity");
+    $(document).on("click", "[flickity='resize']", function() {
+      setTimeout(function() {
+        buildpackCrousel.flickity('resize');
+      }, 200)
+    })
 
 
 
@@ -381,6 +386,28 @@
 			})      
 		})
 
+		$(".buildpack-nav").on("click", "[data-toggle='tab']", function(){
+			var s = $(this).closest(".boxes-cell").addClass("active").siblings().removeClass("active");
+			
+			
+		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		window.buildpack = {
@@ -390,32 +417,43 @@
 				title: "",
 				desc: ""
 			},
-			customsize: {},
 			update: function(){
-				this.paperOptions.paper = this.currentData.paper || this.paperOptions.paper;
-				this.paperOptions.handle = this.currentData.handle || this.paperOptions.handle;
-				this.paperOptions.size = this.currentData.size || this.paperOptions.size;
-				this.paperOptions.stamp = this.currentData.stamp || this.paperOptions.stamp;
-				console.log(this.currentData);
+				var options = $.extend( this.paperOptions, this.currentData );
+				console.log(options);
 			},
-			appendInSummary: function (){
-				var containerContent = $(".summary-items");
-				console.log(this)
-				var inputName = this.currentData.inputName;
-				var title = this.currentData.title;
-				var desc = this.currentData.desc;
-				var content =       '<div class="summary-item '+inputName+'">'+
-															'<span class="summary-title"><b>'+title+'</b></span>'+
-															'<span class="summary-desc">'+desc+'</span>'+
-														'</div>';
+			appendInSummary: function ( container ){
+				var containerContent = container || $(".summary-items");
+				for( var i in this.currentData  ){
+					var content = '<div class="summary-item '+this.currentData[i].inputName+'">'+
+													'<span class="summary-title"><b>'+this.currentData[i].title+'</b></span>'+
+													'<span class="summary-desc">'+this.currentData[i].desc+'</span>'+
+												'</div>';
+					if( !containerContent.children().hasClass(this.currentData[i].inputName) )
+						containerContent.append( content );
+					else
+						containerContent.find("."+this.currentData[i].inputName+" .summary-desc").text(this.currentData[i].desc);
+				}
 
-				if( !containerContent.children().hasClass(this.currentData.inputName) )
-					containerContent.append( content );
-				else
-					containerContent.find("."+this.currentData.inputName+" .summary-desc").text(this.currentData.desc);
 			},
+
+			dataInputConverter: function(self){
+				if( typeof self.attr("data-input") != "undefined" )
+						this.currentData = JSON.parse( self.attr("data-input") );
+				else
+					console.error("Нужны параметры в атрибуте data-input");
+		
+
+			},
+
 			changeImage: function(){
-				var paper = [this.paperOptions.paper, this.paperOptions.handle, this.paperOptions.size];
+
+				var paper = (buildpack.paperOptions.paper) ? this.paperOptions.paper.value : null;
+				var handle = (buildpack.paperOptions.handle) ? this.paperOptions.handle.value : null;
+				var size = (buildpack.paperOptions.size) ? this.paperOptions.size.value : null;
+
+				//console.log(paper, handle, size)
+
+				var paper = [paper, handle, size];
 				paper = paper.filter(function(arr) {
 					return arr !== undefined && arr !== null; 
 				});
@@ -423,9 +461,9 @@
 				for (var i = 0; i < paper.length; i++) {
 					i != 0 ? imgName += "-"+paper[i] : imgName += paper[i];
 				}
+				/*Нахождение индекса элемента карусели картинки*/
 				var index = $("[data-buildpack-image*='"+imgName+"']").eq(0).index();
-				buildPackCrousel.flickity( 'select', index );
-				//console.log(imgName, el);
+				buildpackCrousel.flickity( 'select', index );
 			}
 
 
@@ -435,77 +473,144 @@
 		$("[data-buildpack-event='radio']").on("change", function(){
 			var self = $(this);
 
-			//Убираем отметку на фиксированных размеров
-			if( $("[name='buildpack-item-1-size']:checked").length != 0){
-				$("[name='buildpack-item-1-customsize']").val("");
-			}
 
-			buildpack.currentData = self.attr("data-input");
-		 	if (buildpack.currentData)
-				buildpack.currentData = JSON.parse(buildpack.currentData);
-
-			buildpack.appendInSummary();
+			buildpack.dataInputConverter(self);
 			buildpack.update();
+			buildpack.appendInSummary();
 
 			if( buildpack.currentData.paper || buildpack.currentData.handle || buildpack.currentData.size)
 				buildpack.changeImage();
-			console.log(buildpack.paperOptions);
 
 		})
 
 
 
- 		var customsize = {};
+ 		
 		$("[data-buildpack-event='num']").on("change", function(){
 			var self = $(this);
 				if( isNaN(self.val()*1) ){
 					self.val("");
 					return;
 				}
-				if( typeof self.attr("data-input") != "undefined" ){
-					buildpack.currentData = self.attr("data-input");
-			 		if (buildpack.currentData)
-						buildpack.currentData = JSON.parse(buildpack.currentData);
-				}else{
-					console.error("Нужны параметры в атрибуте data-input")
-					return;
-				}
-				
 
-				if( self.filter("[name*='-customsize']").length )
-					customsizeField(self);
-				if( self.filter("[name*='buildpack-item-1-edition']").length )
-					if( self.val() < 5000 ) self.val(5000)
-
-
-				buildpack.currentData.desc = self.val();
-				buildpack.appendInSummary();
+				buildpack.dataInputConverter(self);
 				buildpack.update();
+				
+				editionField(self);
+				customsizeField(self);
+
+				buildpack.appendInSummary();
 		})
+
 		$("[data-buildpack-event='text']").on("change", function(){
 			var self = $(this);
+			buildpack.dataInputConverter(self);
+			buildpack.update();
+			buildpack.currentData.comments.value = self.val();
 		})
 
+		/*Клик по кнопке заказать расчёт*/
+		$("[data-src='#ordercalc']").on("click", function(){
+			var self = $(this);
+			var descContent = "";
+			var inputContent = ""
+			for(var i in buildpack.paperOptions ){
+				if (buildpack.paperOptions[i].visible == "hidden")
+					continue;
+				 	descContent += 
+					 	'<tr>'+
+			        '<td>'+buildpack.paperOptions[i].title+'</td>'+
+			        '<td>'+buildpack.paperOptions[i].desc+'</td>'+
+			      '</tr>';
+
+			    inputContent += 
+			    '<input class="modal-control" type="text" '+
+			    			'name="'+buildpack.paperOptions[i].inputName+'" '+
+			    			'value="'+buildpack.paperOptions[i].value+'" '+
+			    			'placeholder="'+buildpack.paperOptions[i].title+'">'
+			      
+			}
+			/*Вставка изображение*/
+			var bg = self.closest(".buildpack-summary").find(".buildpack-summary-img .is-selected .img").attr("style");
+			$("#summary-info .img").attr("style", bg);
+			
+			$("#ordercalc .desc-content table tbody").text("");
+			$("#ordercalc .desc-content table tbody").append(descContent);
+			$("#ordercalc form #field-hidden").append(inputContent);
+			console.log(descContent);
+		})
 		
 
-		function customsizeField (){
-					if( $("[name='buildpack-item-1-size']:checked").length != 0){
-						$("[name='buildpack-item-1-size']:checked")[0].checked = false;
+		$("[data-checked-toggle]").map(function(i, el){
+			$(el).attr("data-checked-toggle")
+		})
+
+
+		window.checkedToggle = function( checkedInput, valueInput, status ){
+			console.log( checkedInput, valueInput, status )
+				/*Убираем отметку на фиксированных размеров*/
+				if( status ){
+					if( $(checkedInput+":checked").length != 0){
+						$(valueInput).val("");
 					}
-					var height = self.filter("[data-size-field='height']").val();
-					var width = self.filter("[data-size-field='width']").val();
-					var weight = self.filter("[data-size-field='weight']").val();
+				}else{
+					if( $(checkedInput+":checked").length != 0){
+						$(checkedInput+":checked")[0].checked = false;
+					}
+				}
 
-					customsize.height = height || customsize.height || "_";
-					customsize.width = width || customsize.width || "_";
-					customsize.weight = weight || customsize.weight || "_";
-					var customsizeValue = customsize.height+"x"+customsize.width+"x"+customsize.weight;
+				if( $("[name='buildpack-item-1-size']:checked").length != 0){
+					$("[name='buildpack-item-1-customsize']").val("");
+				}
 
-					console.log(customsizeValue);
-
-					buildpack.currentData.desc = customsizeValue;
-					buildpack.currentData.size = customsizeValue;
+			
 		}
+
+		var customsize = {};
+		function customsizeField (self){
+			if( !self.filter("[name*='-customsize']").length )
+				return;
+
+
+			var height = self.filter("[data-size-field='height']").val();
+			var width = self.filter("[data-size-field='width']").val();
+			var weight = self.filter("[data-size-field='weight']").val();
+
+			customsize.height = height || customsize.height || "_";
+			customsize.width = width || customsize.width || "_";
+			customsize.weight = weight || customsize.weight || "_";
+			var customsizeValue = customsize.height+"x"+customsize.width+"x"+customsize.weight;
+
+			console.log(customsizeValue, buildpack);
+
+			buildpack.currentData.size.desc = customsizeValue;
+			buildpack.currentData.size.value = customsizeValue;
+		}
+
+		function editionField(self){
+			if( !self.filter("[name*='-edition']").length )
+				return;
+			if( self.filter("[data-input-value-min]").length ){
+				var min = self.attr("data-input-value-min");
+				if( self.val() < min ) self.val(min);
+			}
+			buildpack.currentData.edition.desc = self.val();
+			buildpack.currentData.edition.value = self.val();
+		
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

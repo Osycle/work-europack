@@ -18,73 +18,126 @@
 </head>
 
 <body>
-  <div class="hide">
-    <!-- feedback-modal -->
-    <div class="feedback-modal modal-default box-md-5" id="feedback-modal">
-      <div class="form-content p-v-30">
-        <form method="POST" action="">
-          <h3 class="text-center-sm m-v-10 color-2">Связаться с нами</h3>
-          <div class="row">
-            <div class="col-md-6 p-h-15 m-v-10 control-content">
-              <input class="modal-control field-void" type="text" name="" value="">
-              <label>
-                <p>ФИО</p>
-              </label>
-            </div>
-            <div class="col-md-6 p-h-15 m-v-10 control-content">
-              <input class="modal-control field-void" type="text" name="" value="">
-              <label>
-                <p>E-mail</p>
-              </label>
-            </div>
-            <div class="col-md-6 p-h-15 m-v-10 control-content">
-              <textarea class="modal-control field-void" name="" resize="none"></textarea>
-              <label>
-                <p>Сообщение</p>
-              </label>
-            </div>
-            <div class="col-md-6 p-h-15 m-v-10 control-content">
-              <input class="modal-control field-void" type="text" name="" value="">
-              <label>
-                <p>Телефон</p>
-              </label>
-            </div>
-            <br>
-            <div class="col-md-6 p-h-15 m-v-10 control-content">
-              <button type="submit" class="box-xs-10 btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- recall-modal -->
-    <div class="recall-modal modal-default box-md-2" id="recall-modal">
-      <div class="form-content p-v-30">
-        <form method="POST" action="">
-          <h3 class="text-center-sm m-v-10 color-2">Заказать звонок</h3>
-          <div class="row">
-            <div class="col-md-12 p-h-15 m-v-10 control-content">
-              <input class="modal-control field-void" type="text" name="" value="">
-              <label>
-                <p>ФИО</p>
-              </label>
-            </div>
-            <div class="col-md-12 p-h-15 m-v-10 control-content">
-              <input class="modal-control field-void" type="text" name="" value="">
-              <label>
-                <p>Телефон</p>
-              </label>
-            </div>
-            <br>
-            <div class="col-md-12 m-auto p-h-15 m-v-10 control-content">
-              <button type="submit" class="box-xs-8 m-auto btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+	<div class="hide">
+		<!-- feedback-modal -->
+		<div class="feedback-modal modal-default box-md-5" id="feedback-modal">
+			<div class="form-content p-v-30">
+				<form method="POST" action="">
+					<h3 class="text-center-sm m-v-10 color-2">Связаться с нами</h3>
+					<div class="row">
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>ФИО</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>E-mail</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<textarea class="modal-control field-void" name="" resize="none"></textarea>
+							<label>
+								<p>Сообщение</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Телефон</p>
+							</label>
+						</div>
+						<br>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<button type="submit" class="box-xs-10 btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- recall-modal -->
+		<div class="recall-modal modal-default box-md-2" id="recall-modal">
+			<div class="form-content p-v-30">
+				<form method="POST" action="">
+					<h3 class="text-center-sm m-v-10 color-2">Заказать звонок</h3>
+					<div class="row">
+						<div class="col-md-12 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>ФИО</p>
+							</label>
+						</div>
+						<div class="col-md-12 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Телефон</p>
+							</label>
+						</div>
+						<br>
+						<div class="col-md-12 m-auto p-h-15 m-v-10 control-content">
+							<button type="submit" class="box-xs-8 m-auto btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 
-  </div>  
+		<!-- ordercalc-modal -->
+		<div class="ordercalc-modal modal-default box-md-6" id="ordercalc">
+			<div class="form-content p-v-30">
+				<form method="POST" action="">
+					<h3 class="text-center-sm m-v-10 color-2">Ваш заказ</h3>
+					<div class="row">
+						<!-- Информация о товаре -->
+						<div class="col-md-12 p-h-15" id="summary-info">
+							<div class="row">
+								<div class="img-content col-md-3 p-h-15">
+									<div class="img bg-size-contain bg-position-center" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-20x10x30.jpg');"></div>
+								</div>
+								<div class="desc-content table-content col-md-9 p-h-15">
+									<table><tbody></tbody></table>
+								</div>
+							</div>
+						</div>
+						<!-- Скрытые поля форм -->
+						<div class="col-md-6 p-h-15 m-v-10 control-content hide" id="field-hidden"></div>
+						<!-- Другие поля -->
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>ФИО</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Телефон</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Эл. почта</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Дополнительная информация</p>
+							</label>
+						</div>
+						<br>
+						<div class="col-xs-12 m-auto p-h-15 m-v-10 control-content">
+							<button type="submit" class="inline-block m-auto btn-def p-h-30 p-v-15 color-white btn-res"><b>Отправить</b></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>  
 	<div id="page">
 		<noscript>
 			<p>Ваш браузер не поддерживает скрипты!
@@ -121,11 +174,11 @@
 								</div>
 								<div class="header-btn-content color-2 col-md-4 p-r-15">
 									<span class="btn-opacity">
-                    <a href="javascript:;" data-fancybox data-src="#feedback-modal" title="" class="p-v-15">Обратная связь</a>
-                  </span>
-                </div>
-                <div class="header-btn-content color-2 col-md-4 p-r-15">
-                  <span class="btn-def">
+										<a href="javascript:;" data-fancybox data-src="#feedback-modal" title="" class="p-v-15">Обратная связь</a>
+									</span>
+								</div>
+								<div class="header-btn-content color-2 col-md-4 p-r-15">
+									<span class="btn-def">
 										<a href="javascript:;" data-fancybox data-src="#recall-modal" title="" class="p-v-15">Заказать звонок</a>
 									</span>
 								</div>
@@ -164,13 +217,13 @@
 									<li><a href="about.html" title="">О компании</a></li>
 									<li><a href="gallery-photos.html" title="">Фотогалерея</a></li>
 									<li><a href="services.html" title="">Услуги</a>
-                    <ul class="sub-menu-1">
-                      <li><a href="productions.html" title="">Крафт пакеты с нанесением логотипа </a></li>
-                      <li><a href="productions.html" title="">Бабинорезка</a></li>
-                      <li><a href="productions.html" title="">Флекстопечать с рулона на рулон</a></li>
-                      <li><a href="productions.html" title="">Резка рулона на листы</a></li>
-                    </ul>
-                  </li>
+										<ul class="sub-menu-1">
+											<li><a href="productions.html" title="">Крафт пакеты с нанесением логотипа </a></li>
+											<li><a href="productions.html" title="">Бабинорезка</a></li>
+											<li><a href="productions.html" title="">Флекстопечать с рулона на рулон</a></li>
+											<li><a href="productions.html" title="">Резка рулона на листы</a></li>
+										</ul>
+									</li>
 									<li><a href="productions.html" title="">Каталог</a></li>
 									<li><a href="contacts.html" title="">Контакты</a></li>
 								</ul>
@@ -189,20 +242,20 @@
 				<li><a href="services.html" title="">Услуги</a></li>
 				<li><a href="productions.html" title="">Каталог</a></li>
 				<li><a href="contacts.html" title="">Контакты</a></li>
-        <div class="min-menu-footer text-center m-v-15">
-          <span class="btn-def col-xs-6 inline-block m-v-5 bg-color-2">
-            <small>
-              <a href="javascript:;" data-fancybox data-src="#feedback-modal" title="" class="p-v-10">Обратная связь</a>
-            </small>
-          </span>
-          <span class="btn-def col-xs-6 inline-block m-v-5">
-            <small>
-              <a href="javascript:;" data-fancybox data-src="#recall-modal" title="" class="p-v-10">Заказать звонок</a>
-            </small>
-          </span>
-        </div>
+				<div class="min-menu-footer text-center m-v-15">
+					<span class="btn-def col-xs-6 inline-block m-v-5 bg-color-2">
+						<small>
+							<a href="javascript:;" data-fancybox data-src="#feedback-modal" title="" class="p-v-10">Обратная связь</a>
+						</small>
+					</span>
+					<span class="btn-def col-xs-6 inline-block m-v-5">
+						<small>
+							<a href="javascript:;" data-fancybox data-src="#recall-modal" title="" class="p-v-10">Заказать звонок</a>
+						</small>
+					</span>
+				</div>
 
-      </ul>
+			</ul>
 		</div>
 		<!-- MIN MENU HEADER -->
 		<div class="min-menu-header hidden-md hidden-lg">
@@ -291,467 +344,893 @@
 						<div class="entry-header color-2 text-center m-v-60">
 							<h1>Мастер подбора крафт пакетов и бумажных мешков</h1>
 						</div>
-						<div class="buildpack-nav boxes-5 color-2">
-							<div class="boxes-cell">
-								<div class="pie-flex-center">
-									<div>
-										<p>Крафт пакеты с ручками</p>
+
+						<div class="buildpack-nav flex color-2 nav nav-tabs">
+							<div class="box-xs-5 boxes-cell">
+								<a href="#buildpack-item-1" data-toggle="tab" title="" flickity="resize">
+									<div class="pie-flex-center">
+										<div>
+											<p>Крафт пакеты с ручками</p>
+										</div>
 									</div>
-								</div>
+								</a>
 							</div>
-							<div class="active boxes-cell">
-								<div class="pie-flex-center">
-									<div>
-										<p>Крафт пакеты без ручек </p>
+							<div class="box-xs-5 boxes-cell active">
+								<a href="#buildpack-item-2" data-toggle="tab" title="" flickity="resize">
+									<div class="pie-flex-center">
+										<div>
+											<p>Крафт пакет без ручки</p>
+										</div>
 									</div>
-								</div>
+								</a>
 							</div>
-							<div class="boxes-cell">
+							<div class="box-xs-5 boxes-cell">
 								<div class="pie-flex-center">
 									<div>
 										<p>Крафт пакеты с V-образным дном(Саше)</p>
 									</div>
 								</div>
 							</div>
-							<div class="boxes-cell">
+							<div class="box-xs-5 boxes-cell">
 								<div class="pie-flex-center">
 									<div>
 										<p>Крафт пакеты с V-образным дном(Саше) с окошками</p>
 									</div>
 								</div>
 							</div>
-							<div class="boxes-cell">
-								<div class="pie-flex-center">
-									<div>
-										<p>Листы для еды из крафт, пергамент и ламинированной крафт бумаги</p>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="buildpack-content m-v-30 clearfix">
 							<form action="" method="get" accept-charset="utf-8">
+								<div class="tab-content">
 
-								<!-- buildpack-item-1 -->
-								<div class="buildpack-item-1" id="buildpack-item-1">
-									<div class="row">
-										<div class="col-md-7 buildpack-field p-h-15" data-input-filled="content" data-buildpack-field >
+									<!-- buildpack-item-1 -->
+									<div class="buildpack-item-1 tab-pane fade" id="buildpack-item-1" >
+										<div class="row">
+											<div class="col-md-7 buildpack-field p-h-15" data-input-filled="content" >
 
-											<!-- Бумага -->
-											<div class="col-xs-12 field-paper" data-input-filled="1">
-												<div class="row">
-													<div class="col-md-2 p-h-15 m-v-15">
-														<p><b>Бумага</b></p>
-													</div>
-													<div class="col-md-10 p-h-15 m-v-15">
-														<div class="col-md-6">
-															<input type="radio" name="buildpack-item-1-paper" id="buildpack-item-1-paper-1" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                  "title": "Бумага",
-                                  "paper": "buriy",
-                                  "inputName": "buildpack-item-1-paper",
-                                  "desc": "Бурый крафт"
-                                }'>
-															<label for="buildpack-item-1-paper-1" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>Бурый крафт</p></span>
-															</label>
+												<!-- Бумага -->
+												<div class="col-xs-12 field-paper" data-input-filled="1">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Бумага</b></p>
 														</div>
-														<div class="col-md-6">
-															<input type="radio" name="buildpack-item-1-paper" id="buildpack-item-1-paper-2" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                    "title": "Бумага",
-                                    "paper": "beliy",
-                                    "inputName": "buildpack-item-1-paper",
-                                    "desc": "Беленый крафт"
-                                  }'>
-															<label for="buildpack-item-1-paper-2" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>Беленый крафт</p></span>
-															</label>
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-1-paper" id="buildpack-item-1-paper-1" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"paper": {
+																			"title": "Бумага",
+																			"value": "buriy",
+																			"inputName": "buildpack-item-1-paper",
+																			"desc": "Бурый крафт"
+																		}
+																	}'>
+																<label for="buildpack-item-1-paper-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Бурый крафт</p></span>
+																</label>
+															</div>
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-1-paper" id="buildpack-item-1-paper-2" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"paper": {
+																			"title": "Бумага",
+																			"value": "beliy",
+																			"inputName": "buildpack-item-1-paper",
+																			"desc": "Беленый крафт"
+																		}
+																	}'>
+																<label for="buildpack-item-1-paper-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Беленый крафт</p></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Тип ручек -->
+												<div class="col-xs-12 m-v-15 field-handle" data-input-filled="2">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Тип ручек</b></p>
+														</div>
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-1-handle" id="buildpack-item-1-handle-1" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																			"handle": {
+																				"title": "Тип ручек",
+																				"value": "ploskieruchki",
+																				"inputName": "buildpack-item-1-handle",
+																				"desc": "Плоские ручки"
+																			}
+																		}'>
+																<label for="buildpack-item-1-handle-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Плоские ручки</p></span>
+																</label>
+															</div>
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-1-handle" id="buildpack-item-1-handle-2" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																			"handle": {
+																				"title": "Тип ручек",
+																				"value": "kruchenieruchki",
+																				"inputName": "buildpack-item-1-handle",
+																				"desc": "Крученые ручки"
+																			}
+																		}'>
+																<label for="buildpack-item-1-handle-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Крученые ручки</p></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+												<!-- Размер -->
+												<div class="col-xs-12 field-size" data-input-filled="3">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Размер</b></p>
+														</div>
+														<!-- [name="buildpack-item-1-size"]', '[name="buildpack-item-1-customsize"]', true -->
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-1" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "20x10x30",
+																			"inputName": "buildpack-item-1-size",
+																			"desc": "20x10x30"
+																		}
+																	}'>
+																<label for="buildpack-item-1-size-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>20x10x30</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-2" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "24x15x33",
+																			"inputName": "buildpack-item-1-size",
+																			"desc": "24x15x33"
+																		}
+																	}'>
+																<label for="buildpack-item-1-size-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>24x15x33</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-3" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "27x15x33",
+																			"inputName": "buildpack-item-1-size",
+																			"desc": "27x15x33"
+																		}
+																	}'>
+																<label for="buildpack-item-1-size-3" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>27x15x33</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-4" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "34x17x40",
+																			"inputName": "buildpack-item-1-size",
+																			"desc": "34x17x40"
+																		}
+																	}'>
+																<label for="buildpack-item-1-size-4" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>34x17x40</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-5" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "18x10x19,5",
+																			"inputName": "buildpack-item-1-size",
+																			"desc": "18x10x19,5"
+																		}
+																	}'>
+																<label for="buildpack-item-1-size-5" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>18x10x19,5</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-6" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "20x12x28,5",
+																			"inputName": "buildpack-item-1-size",
+																			"desc": "20x12x28,5"
+																		}
+																	}'>
+																<label for="buildpack-item-1-size-6" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>20x12x28,5</p></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Заказной размер -->
+												<div class="col-xs-12 m-v-30 field-customsize" data-input-filled="3">
+													<div class="row">
+														<div class="col-md-4 p-h-15">
+															<input type="text" name="buildpack-item-1-customsize" placeholder="Высота" class="box-xs-10 pie-form-control" data-size-field="height" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																data-input='{
+																	"size": {
+																		"title": "Размер",
+																		"inputName": "buildpack-item-1-size"
+																	}
+																}'>
+														</div>
+														<div class="col-md-4 p-h-15">
+															<input type="text" name="buildpack-item-1-customsize" placeholder="Ширина" class="box-xs-10 pie-form-control" data-size-field="width" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																data-input='{
+																	"size": {
+																		"title": "Размер",
+																		"inputName": "buildpack-item-1-size"
+																	}
+																}'>
+														</div>
+														<div class="col-md-4 p-h-15">
+															<input type="text" name="buildpack-item-1-customsize" placeholder="Глубина" class="box-xs-10 pie-form-control" data-size-field="weight" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																data-input='{
+																	"size": {
+																		"title": "Размер",
+																		"inputName": "buildpack-item-1-size"
+																	}
+																}'>
+														</div>
+													</div>
+												</div>
+
+												<!-- Печать -->
+												<div class="col-xs-12 m-v-15 field-stamp" data-input-filled="4">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Печать</b></p>
+														</div>
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-1-stamp" id="buildpack-item-1-stamp-1" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"stamp":{
+																			"title": "Печать",
+																			"desc": "Да",
+																			"value": "true",
+																			"inputName": "buildpack-item-1-stamp"
+																		}
+																	}'>
+																<label for="buildpack-item-1-stamp-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Да</p></span>
+																</label>
+															</div>
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-1-stamp" id="buildpack-item-1-stamp-2" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"stamp":{
+																			"title": "Печать",
+																			"desc": "Нет",
+																			"value": "false",
+																			"inputName": "buildpack-item-1-stamp"
+																		}
+																	}'>
+																<label for="buildpack-item-1-stamp-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Нет</p></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Тираж -->
+												<div class="col-xs-12 field-edition">
+													<div class="row">
+														<div class="col-md-3 p-h-15 m-v-15">
+															<p><b>Тираж</b></p>
+														</div>
+														<div class="col-md-7 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="text" name="buildpack-item-1-edition" placeholder="Указать тираж Мин. 5000" class="box-xs-10 pie-form-control" data-buildpack-event="num" data-input-value-min="5000" 
+																	data-input='{
+																		"edition": {
+																			"title": "Тираж",
+																			"inputName": "buildpack-item-1-edition"
+																		} 
+																	}'>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Комментарии -->
+												<div class="col-xs-12 field-comment">
+													<div class="row">
+														<div class="col-md-3 p-h-15 m-v-15">
+															<p><b>Комментарии</b></p>
+														</div>
+														<div class="col-md-7 p-h-15 m-v-15">
+															<div class="col-md-12">
+																<textarea type="text" name="buildpack-item-1-comments" placeholder="Написать комментарии" class="box-xs-10 pie-form-control" style="height: 150px;" data-buildpack-event="text" 
+																	data-input='{
+																		"comments": {
+																			"title": "Комментарии",
+																			"visible": "hidden",
+																			"inputName": "buildpack-item-1-comments"
+																		}
+																}'></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-md-5 buildpack-summary p-h-15">
+												<div class="buildpack-summary-wrapper clearfix bg-color-white p-h-30 p-v-15">
+													<h1 align="center">Ваша упаковка</h1>
+													<!-- Картинка товара -->
+													<div class="buildpack-summary-img col-xs-12">
+														<div class="buildpack-carousel">
+															<div class="carousel-items">
+
+																<figure data-buildpack-image="beliy-kruchenieruchki-18x10x19,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-18x10x19,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-kruchenieruchki-20x10x30.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-20x10x30.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-kruchenieruchki-20x12x28,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-20x12x28,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-kruchenieruchki-24x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-24x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-kruchenieruchki-27x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-27x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-kruchenieruchki-34x17x40.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-34x17x40.jpg');"></div>
+																	</div>
+																</figure>
+																
+																<figure data-buildpack-image="beliy-ploskieruchki-18x10x19,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-18x10x19,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-ploskieruchki-20x10x30.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-20x10x30.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-ploskieruchki-20x12x28,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-20x12x28,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-ploskieruchki-24x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-24x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-ploskieruchki-27x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-27x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-ploskieruchki-34x17x40.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-34x17x40.jpg');"></div>
+																	</div>
+																</figure>
+
+																<figure data-buildpack-image="buriy-kruchenieruchki-18x10x19,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-18x10x19,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-kruchenieruchki-20x10x30.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-20x10x30.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-kruchenieruchki-20x12x28,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-20x12x28,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-kruchenieruchki-24x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-24x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-kruchenieruchki-27x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-27x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-kruchenieruchki-34x17x40.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-34x17x40.jpg');"></div>
+																	</div>
+																</figure>
+
+																<figure data-buildpack-image="buriy-ploskieruchki-18x10x19,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-18x10x19,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-ploskieruchki-20x10x30.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-20x10x30.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-ploskieruchki-20x12x28,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-20x12x28,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-ploskieruchki-24x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-24x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-ploskieruchki-27x15x33.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-27x15x33.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-ploskieruchki-34x17x40.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-34x17x40.jpg');"></div>
+																	</div>
+																</figure>
+
+
+															</div>
+														</div>
+													</div>
+													<!-- Резюмирование товара -->
+													<div class="buildpack-summary-list col-xs-12 m-v-15">
+														<div class="box-md-7 m-auto">
+															<!-- Контейнер для резюмирование товара -->
+															<div class="summary-items"></div>
+														</div>
+													</div>
+													<div class="col-xs-12">
+														<div class="btn-content text-center m-v-15">
+															<span class="btn-def m-auto inline-block">
+																<a href="javascript:;" data-src="#ordercalc" data-fancybox class="box-xs-10 p-h-30 p-v-15" role="button">Заказать расчет</a>
+															</span>
 														</div>
 													</div>
 												</div>
 											</div>
-
-											<!-- Тип ручек -->
-											<div class="col-xs-12 m-v-15 field-handle" data-input-filled="2">
-												<div class="row">
-													<div class="col-md-2 p-h-15 m-v-15">
-														<p><b>Тип ручек</b></p>
-													</div>
-													<div class="col-md-10 p-h-15 m-v-15">
-														<div class="col-md-6">
-															<input type="radio" name="buildpack-item-1-handle" id="buildpack-item-1-handle-1" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                    "title": "Тип ручек",
-                                    "handle": "ploskieruchki",
-                                    "inputName": "buildpack-item-1-handle",
-                                    "desc": "Плоские ручки"
-                                  }'>
-															<label for="buildpack-item-1-handle-1" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>Плоские ручки</p></span>
-															</label>
-														</div>
-														<div class="col-md-6">
-															<input type="radio" name="buildpack-item-1-handle" id="buildpack-item-1-handle-2" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                    "title": "Тип ручек",
-                                    "handle": "kruchenieruchki",
-                                    "inputName": "buildpack-item-1-handle",
-                                    "desc": "Крученые ручки"
-                                  }'>
-															<label for="buildpack-item-1-handle-2" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>Крученые ручки</p></span>
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-
-
-											<!-- Размер -->
-											<div class="col-xs-12 field-size" data-input-filled="3">
-												<div class="row">
-													<div class="col-md-2 p-h-15 m-v-15">
-														<p><b>Размер</b></p>
-													</div>
-													<div class="col-md-10 p-h-15 m-v-15">
-														<div class="col-md-4">
-															<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-1" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                  "title": "Размер",
-                                  "size": "20x10x30",
-                                  "inputName": "buildpack-item-1-size",
-                                  "desc": "20x10x30"
-                                }'>
-															<label for="buildpack-item-1-size-1" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>20x10x30</p></span>
-															</label>
-														</div>
-														<div class="col-md-4">
-															<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-2" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                  "title": "Размер",
-                                  "size": "24x15x33",
-                                  "inputName": "buildpack-item-1-size",
-                                  "desc": "24x15x33"
-                                }'>
-															<label for="buildpack-item-1-size-2" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>24x15x33</p></span>
-															</label>
-														</div>
-														<div class="col-md-4">
-															<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-3" class="hide" 
-                                data-input='{
-                                  "title": "Размер",
-                                  "size": "27x15x33",
-                                  "inputName": "buildpack-item-1-size",
-                                  "desc": "27x15x33"
-                                }'>
-															<label for="buildpack-item-1-size-3" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>27x15x33</p></span>
-															</label>
-														</div>
-														<div class="col-md-4">
-															<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-4" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                  "title": "Размер",
-                                  "size": "34x17x40",
-                                  "inputName": "buildpack-item-1-size",
-                                  "desc": "34x17x40"
-                                }'>
-															<label for="buildpack-item-1-size-4" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>34x17x40</p></span>
-															</label>
-														</div>
-														<div class="col-md-4">
-															<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-5" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                  "title": "Размер",
-                                  "size": "18x10x19,5",
-                                  "inputName": "buildpack-item-1-size",
-                                  "desc": "18x10x19,5"
-                                }'>
-															<label for="buildpack-item-1-size-5" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>18x10x19,5</p></span>
-															</label>
-														</div>
-														<div class="col-md-4">
-															<input type="radio" name="buildpack-item-1-size" id="buildpack-item-1-size-6" class="hide" data-buildpack-event="radio" 
-                                data-input='{
-                                  "title": "Размер",
-                                  "size": "20x12x28,5",
-                                  "inputName": "buildpack-item-1-size",
-                                  "desc": "20x12x28,5"
-                                }'>
-															<label for="buildpack-item-1-size-6" role="button">
-																<span class="radio-circle vam inline-block"></span>
-																<span class="vam inline-block p-l-15"><p>20x12x28,5</p></span>
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<!-- Заказной размер -->
-											<div class="col-xs-12 m-v-30 field-customsize" data-input-filled="3">
-												<div class="row">
-													<div class="col-md-4 p-h-15">
-														<input type="text" name="buildpack-item-1-customsize" placeholder="Высота" class="box-xs-10 pie-form-control" data-size-field="height" data-buildpack-event="num" 
-                              data-input='{
-                                  "title": "Размер",
-                                  "inputName": "buildpack-item-1-size"
-                              }'>
-													</div>
-													<div class="col-md-4 p-h-15">
-														<input type="text" name="buildpack-item-1-customsize" placeholder="Ширина" class="box-xs-10 pie-form-control" data-size-field="width" data-buildpack-event="num" 
-                              data-input='{
-                                  "title": "Размер",
-                                  "inputName": "buildpack-item-1-size"
-                              }'>
-													</div>
-													<div class="col-md-4 p-h-15">
-														<input type="text" name="buildpack-item-1-customsize" placeholder="Глубина" class="box-xs-10 pie-form-control" data-size-field="weight" data-buildpack-event="num" 
-                              data-input='{
-                                  "title": "Размер",
-                                  "inputName": "buildpack-item-1-size"
-                              }'>
-													</div>
-												</div>
-											</div>
-
-                      <!-- Печать -->
-                      <div class="col-xs-12 m-v-15 field-stamp" data-input-filled="4">
-                        <div class="row">
-                          <div class="col-md-2 p-h-15 m-v-15">
-                            <p><b>Печать</b></p>
-                          </div>
-                          <div class="col-md-10 p-h-15 m-v-15">
-                            <div class="col-md-6">
-                              <input type="radio" name="buildpack-item-1-stamp" id="buildpack-item-1-stamp-1" class="hide" data-buildpack-event="radio" 
-	                              data-input='{
-	                                  "title": "Печать",
-	                                  "desc": "Да",
-	                                  "stamp": "true",
-	                                  "inputName": "buildpack-item-1-stamp"
-	                              }'>
-                              <label for="buildpack-item-1-stamp-1" role="button">
-                                <span class="radio-circle vam inline-block"></span>
-                                <span class="vam inline-block p-l-15"><p>Да</p></span>
-                              </label>
-                            </div>
-                            <div class="col-md-6">
-                              <input type="radio" name="buildpack-item-1-stamp" id="buildpack-item-1-stamp-2" class="hide" data-buildpack-event="radio" 
-	                              data-input='{
-	                                  "title": "Печать",
-	                                  "desc": "Нет",
-	                                  "stamp": "false",
-	                                  "inputName": "buildpack-item-1-stamp"
-	                              }'>
-                              <label for="buildpack-item-1-stamp-2" role="button">
-                                <span class="radio-circle vam inline-block"></span>
-                                <span class="vam inline-block p-l-15"><p>Нет</p></span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-											<!-- Тираж -->
-											<div class="col-xs-12 field-edition">
-												<div class="row">
-													<div class="col-md-3 p-h-15 m-v-15">
-														<p><b>Тираж</b></p>
-													</div>
-													<div class="col-md-7 p-h-15 m-v-15">
-														<div class="col-md-6">
-															<input type="text" name="buildpack-item-1-edition" placeholder="Указать тираж Мин. 5000" class="box-xs-10 pie-form-control" data-buildpack-event="num" 
-		                          	data-input='{
-	                                  "title": "Тираж",
-	                                  "inputName": "buildpack-item-1-edition"
-	                              }'>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<!-- Комментарии -->
-											<div class="col-xs-12 field-comment">
-												<div class="row">
-													<div class="col-md-3 p-h-15 m-v-15">
-														<p><b>Комментарии</b></p>
-													</div>
-													<div class="col-md-7 p-h-15 m-v-15">
-														<div class="col-md-12">
-															<textarea type="text" name="buildpack-item-1-edition" placeholder="Написать комментарии" class="box-xs-10 pie-form-control" style="height: 150px;"></textarea>
-														</div>
-													</div>
-												</div>
-											</div>
-
 										</div>
-										<div class="col-md-5 buildpack-summary p-h-15">
-											<div class="buildpack-summary-wrapper clearfix bg-color-white p-h-30 p-v-15">
-												<h1 align="center">Ваша упаковка</h1>
-												<!-- Картинка товара -->
-												<div class="buildpack-summary-img col-xs-12">
-                          <div class="buildpack-carousel">
-                            <div class="carousel-items">
+									</div><!-- ./buildpack-item-1 -->
 
-                              <figure data-buildpack-image="beliy-kruchenieruchki-18x10x19,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-18x10x19,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-kruchenieruchki-20x10x30.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-20x10x30.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-kruchenieruchki-20x12x28,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-20x12x28,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-kruchenieruchki-24x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-24x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-kruchenieruchki-27x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-27x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-kruchenieruchki-34x17x40.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-kruchenieruchki-34x17x40.jpg');"></div>
-                                </div>
-                              </figure>
-                              
-                              <figure data-buildpack-image="beliy-ploskieruchki-18x10x19,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-18x10x19,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-ploskieruchki-20x10x30.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-20x10x30.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-ploskieruchki-20x12x28,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-20x12x28,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-ploskieruchki-24x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-24x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-ploskieruchki-27x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-27x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="beliy-ploskieruchki-34x17x40.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/beliy-ploskieruchki-34x17x40.jpg');"></div>
-                                </div>
-                              </figure>
+									<!-- buildpack-item-2 -->
+									<div class="buildpack-item-2 tab-pane fade in active" id="buildpack-item-2" >
+										<div class="row">
+											<div class="col-md-7 buildpack-field p-h-15" data-input-filled="content" >
 
-                              <figure data-buildpack-image="buriy-kruchenieruchki-18x10x19,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-18x10x19,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-kruchenieruchki-20x10x30.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-20x10x30.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-kruchenieruchki-20x12x28,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-20x12x28,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-kruchenieruchki-24x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-24x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-kruchenieruchki-27x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-27x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-kruchenieruchki-34x17x40.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-kruchenieruchki-34x17x40.jpg');"></div>
-                                </div>
-                              </figure>
-
-                              <figure data-buildpack-image="buriy-ploskieruchki-18x10x19,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-18x10x19,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-ploskieruchki-20x10x30.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-20x10x30.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-ploskieruchki-20x12x28,5.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-20x12x28,5.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-ploskieruchki-24x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-24x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-ploskieruchki-27x15x33.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-27x15x33.jpg');"></div>
-                                </div>
-                              </figure>
-                              <figure data-buildpack-image="buriy-ploskieruchki-34x17x40.jpg">
-                                <div class="img-content">
-                                  <div class="img" style="background-image: url('img/buildpack/buildpack-item-1/buriy-ploskieruchki-34x17x40.jpg');"></div>
-                                </div>
-                              </figure>
-
-
-                            </div>
-                          </div>
-												</div>
-												<!-- Резюмирование товара -->
-												<div class="buildpack-summary-list col-xs-12 m-v-15">
-													<div class="box-md-7 m-auto">
-														<!-- Контейнер для резюмирование товара -->
-														<div class="summary-items"></div>
+												<!-- Бумага -->
+												<div class="col-xs-12 field-paper" data-input-filled="1">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Бумага</b></p>
+														</div>
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-2-paper" id="buildpack-item-2-paper-1" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"paper": {
+																			"title": "Бумага",
+																			"value": "buriy",
+																			"inputName": "buildpack-item-2-paper",
+																			"desc": "Бурый крафт"
+																		}
+																	}'>
+																<label for="buildpack-item-2-paper-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Бурый крафт</p></span>
+																</label>
+															</div>
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-2-paper" id="buildpack-item-2-paper-2" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"paper": {
+																			"title": "Бумага",
+																			"value": "beliy",
+																			"inputName": "buildpack-item-2-paper",
+																			"desc": "Беленый крафт"
+																		}
+																	}'>
+																<label for="buildpack-item-2-paper-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Беленый крафт</p></span>
+																</label>
+															</div>
+															<div class="col-md-offset-6 col-md-6">
+																<input type="radio" name="buildpack-item-2-paper" id="buildpack-item-2-paper-3" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"paper": {
+																			"title": "Бумага",
+																			"value": "beliy-laminatom",
+																			"inputName": "buildpack-item-2-paper",
+																			"desc": "Беленый крафт с ламинатом"
+																		}
+																	}'>
+																<label for="buildpack-item-2-paper-3" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Беленый крафт с ламинатом</p></span>
+																</label>
+															</div>
+														</div>
 													</div>
 												</div>
-												<div class="col-xs-12">
-													<div class="btn-content text-center m-v-15">
-														<span class="btn-def m-auto inline-block">
-															<button class="btn-res box-xs-10 p-h-15 p-v-15" role="button">Заказать расчет</button>
-														</span>
+
+
+												<!-- Размер -->
+												<div class="col-xs-12 field-size" data-input-filled="2">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Размер</b></p>
+														</div>
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-2-size" id="buildpack-item-2-size-1" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "10х6х29,5",
+																			"inputName": "buildpack-item-2-size",
+																			"desc": "10х6х29,5"
+																		}
+																	}'>
+																<label for="buildpack-item-2-size-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>10х6х29,5</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-2-size" id="buildpack-item-2-size-2" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "16х7х16",
+																			"inputName": "buildpack-item-2-size",
+																			"desc": "16х7х16"
+																		}
+																	}'>
+																<label for="buildpack-item-2-size-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>16х7х16</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-2-size" id="buildpack-item-2-size-3" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "18х10х30,5",
+																			"inputName": "buildpack-item-2-size",
+																			"desc": "18х10х30,5"
+																		}
+																	}'>
+																<label for="buildpack-item-2-size-3" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>18х10х30,5</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-2-size" id="buildpack-item-2-size-4" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "18х13,5х7",
+																			"inputName": "buildpack-item-2-size",
+																			"desc": "18х13,5х7"
+																		}
+																	}'>
+																<label for="buildpack-item-2-size-4" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>18х13,5х7</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-2-size" id="buildpack-item-2-size-5" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "20х10х30",
+																			"inputName": "buildpack-item-2-size",
+																			"desc": "20х10х30"
+																		}
+																	}'>
+																<label for="buildpack-item-2-size-5" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>20х10х30</p></span>
+																</label>
+															</div>
+															<div class="col-md-4">
+																<input type="radio" name="buildpack-item-2-size" id="buildpack-item-2-size-6" class="hide" data-buildpack-event="radio" onchange='checkedToggle(".field-size input", ".field-customsize input", true)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"value": "23,5х15х28",
+																			"inputName": "buildpack-item-2-size",
+																			"desc": "23,5х15х28"
+																		}
+																	}'>
+																<label for="buildpack-item-2-size-6" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>23,5х15х28</p></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Заказной размер -->
+												<div class="col-xs-12 m-v-30 field-customsize" data-input-filled="3">
+													<div class="row">
+														<div class="col-md-4 p-h-15">
+															<input type="text" name="buildpack-item-2-customsize" placeholder="Высота" class="box-xs-10 pie-form-control" data-size-field="height" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																data-input='{
+																	"size": {
+																		"title": "Размер",
+																		"inputName": "buildpack-item-2-size"
+																	}
+																}'>
+														</div>
+														<div class="col-md-4 p-h-15">
+															<input type="text" name="buildpack-item-2-customsize" placeholder="Ширина" class="box-xs-10 pie-form-control" data-size-field="width" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																data-input='{
+																	"size": {
+																		"title": "Размер",
+																		"inputName": "buildpack-item-2-size"
+																	}
+																}'>
+														</div>
+														<div class="col-md-4 p-h-15">
+															<input type="text" name="buildpack-item-2-customsize" placeholder="Глубина" class="box-xs-10 pie-form-control" data-size-field="weight" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																data-input='{
+																	"size": {
+																		"title": "Размер",
+																		"inputName": "buildpack-item-2-size"
+																	}
+																}'>
+														</div>
+													</div>
+												</div>
+
+												<!-- Печать -->
+												<div class="col-xs-12 m-v-15 field-stamp" data-input-filled="3">
+													<div class="row">
+														<div class="col-md-2 p-h-15 m-v-15">
+															<p><b>Печать</b></p>
+														</div>
+														<div class="col-md-10 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-2-stamp" id="buildpack-item-2-stamp-1" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"stamp":{
+																			"title": "Печать",
+																			"desc": "Да",
+																			"value": "true",
+																			"inputName": "buildpack-item-2-stamp"
+																		}
+																	}'>
+																<label for="buildpack-item-2-stamp-1" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Да</p></span>
+																</label>
+															</div>
+															<div class="col-md-6">
+																<input type="radio" name="buildpack-item-2-stamp" id="buildpack-item-2-stamp-2" class="hide" data-buildpack-event="radio" 
+																	data-input='{
+																		"stamp":{
+																			"title": "Печать",
+																			"desc": "Нет",
+																			"value": "false",
+																			"inputName": "buildpack-item-2-stamp"
+																		}
+																	}'>
+																<label for="buildpack-item-2-stamp-2" role="button">
+																	<span class="radio-circle vam inline-block"></span>
+																	<span class="vam inline-block p-l-15"><p>Нет</p></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Тираж -->
+												<div class="col-xs-12 field-edition">
+													<div class="row">
+														<div class="col-md-3 p-h-15 m-v-15">
+															<p><b>Тираж</b></p>
+														</div>
+														<div class="col-md-7 p-h-15 m-v-15">
+															<div class="col-md-6">
+																<input type="text" name="buildpack-item-2-edition" placeholder="Указать тираж Мин. 3000" class="box-xs-10 pie-form-control" data-buildpack-event="num" data-input-value-min="3000" 
+																	data-input='{
+																		"edition": {
+																			"title": "Тираж",
+																			"inputName": "buildpack-item-2-edition"
+																		} 
+																	}'>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Комментарии -->
+												<div class="col-xs-12 field-comment">
+													<div class="row">
+														<div class="col-md-3 p-h-15 m-v-15">
+															<p><b>Комментарии</b></p>
+														</div>
+														<div class="col-md-7 p-h-15 m-v-15">
+															<div class="col-md-12">
+																<textarea type="text" name="buildpack-item-2-comments" placeholder="Написать комментарии" class="box-xs-10 pie-form-control" style="height: 150px;" data-buildpack-event="text" 
+																	data-input='{
+																		"comments": {
+																			"title": "Комментарии",
+																			"visible": "hidden",
+																			"inputName": "buildpack-item-2-comments"
+																		}
+																}'></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-md-5 buildpack-summary p-h-15">
+												<div class="buildpack-summary-wrapper clearfix bg-color-white p-h-30 p-v-15">
+													<h1 align="center">Ваша упаковка</h1>
+													<!-- Картинка товара -->
+													<div class="buildpack-summary-img col-xs-12">
+														<div class="buildpack-carousel">
+															<div class="carousel-items">
+
+																<figure data-buildpack-image="beliy-10х6х29,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-10х6х29,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-16х7х16">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-16х7х16.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-18х10х30,5">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-18х10х30,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-18х13,5х7">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-18х13,5х7.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-23,5х15х28">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-23,5х15х28.jpg');"></div>
+																	</div>
+																</figure>
+
+																<figure data-buildpack-image="beliy-laminatom-10х6х29,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-laminatom-10х6х29,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-laminatom-16х7х16">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-laminatom-16х7х16.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-laminatom-18х10х30,5">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-laminatom-18х10х30,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-laminatom-18х13,5х7">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-laminatom-18х13,5х7.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="beliy-laminatom-23,5х15х28">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/beliy-laminatom-23,5х15х28.jpg');"></div>
+																	</div>
+																</figure>
+
+																<figure data-buildpack-image="buriy-10х6х29,5.jpg">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/buriy-10х6х29,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-16х7х16">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/buriy-16х7х16.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-18х10х30,5">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/buriy-18х10х30,5.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-18х13,5х7">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/buriy-18х13,5х7.jpg');"></div>
+																	</div>
+																</figure>
+																<figure data-buildpack-image="buriy-23,5х15х28">
+																	<div class="img-content">
+																		<div class="img" style="background-image: url('img/buildpack/buildpack-item-2/buriy-23,5х15х28.jpg');"></div>
+																	</div>
+																</figure>
+
+															</div>
+														</div>
+													</div>
+													<!-- Резюмирование товара -->
+													<div class="buildpack-summary-list col-xs-12 m-v-15">
+														<div class="box-md-7 m-auto">
+															<!-- Контейнер для резюмирование товара -->
+															<div class="summary-items"></div>
+														</div>
+													</div>
+													<div class="col-xs-12">
+														<div class="btn-content text-center m-v-15">
+															<span class="btn-def m-auto inline-block">
+																<a href="javascript:;" data-src="#ordercalc" data-fancybox class="box-xs-10 p-h-30 p-v-15" role="button">Заказать расчет</a>
+															</span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									</div><!-- ./buildpack-item-2 -->
 								</div>
-
 
 							</form>
 						</div>
@@ -945,34 +1424,34 @@
 								<br>
 								<p>Минимальный тираж заказа пакетов и мешков в производство оптом составляет 10 000 шт. Сроки изготовления - 30</p>
 								<p>календарных дней. Печать до 6 цветов. </p>
-	              <div class="p-h-15 about-numbers m-v-30">
-	                <div class="boxes-4 text-center">
-	                  <div class="boxes-cell" data-aos="zoom-in" data-aos-delay="200">
-	                    <h2>Более</h2>
-	                    <h1>200</h1>
-	                    <br>
-	                    <p>Номенклатурных позиций готовой продукции на складе в Москве. Реализация от 1 упаковки.</p>
-	                  </div>
-	                  <div class="boxes-cell" data-aos="zoom-in" data-aos-delay="400">
-	                    <h1>5000</h1>
-	                    <h2>тыс.шт</h2>
-	                    <br>
-	                    <p>Минимальный тираж заказа в производство</p>
-	                  </div>
-	                  <div class="boxes-cell" data-aos="zoom-in" data-aos-delay="600">
-	                    <h1>30</h1>
-	                    <h2>дней</h2>
-	                    <br>
-	                    <p>Срок производства индивидуальных заказов</p>
-	                  </div>
-	                  <div class="boxes-cell" data-aos="zoom-in" data-aos-delay="800">
-	                    <h2>Доверяет нам</h2>
-	                    <h1>150</h1>
-	                    <br>
-	                    <p>Номенклатурных позиций готовой продукции на складе в Москве. Реализация от 1 упаковки.</p>
-	                  </div>
-	                </div>
-	              </div>
+								<div class="p-h-15 about-numbers m-v-30">
+									<div class="boxes-4 text-center">
+										<div class="boxes-cell" data-aos="zoom-in" data-aos-delay="200">
+											<h2>Более</h2>
+											<h1>200</h1>
+											<br>
+											<p>Номенклатурных позиций готовой продукции на складе в Москве. Реализация от 1 упаковки.</p>
+										</div>
+										<div class="boxes-cell" data-aos="zoom-in" data-aos-delay="400">
+											<h1>5000</h1>
+											<h2>тыс.шт</h2>
+											<br>
+											<p>Минимальный тираж заказа в производство</p>
+										</div>
+										<div class="boxes-cell" data-aos="zoom-in" data-aos-delay="600">
+											<h1>30</h1>
+											<h2>дней</h2>
+											<br>
+											<p>Срок производства индивидуальных заказов</p>
+										</div>
+										<div class="boxes-cell" data-aos="zoom-in" data-aos-delay="800">
+											<h2>Доверяет нам</h2>
+											<h1>150</h1>
+											<br>
+											<p>Номенклатурных позиций готовой продукции на складе в Москве. Реализация от 1 упаковки.</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div><!-- ./short-about -->
@@ -1019,8 +1498,8 @@
 						</div>
 					</div><!-- ./short-partners -->
 
-        
-          
+				
+					
 
 				</div>
 
