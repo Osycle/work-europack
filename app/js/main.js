@@ -198,15 +198,17 @@
 			});
 		
 		/*buildpack-carousel*/
-		if( $(".buildpack-carousel .carousel-items figure").length )
-			window.buildpackCrousel = $(".buildpack-carousel .carousel-items").flickity({
+		if( $(".buildpack-carousel .carousel-items figure").length ){
+
+			window.buildpackCarousel = $(".buildpack-carousel .carousel-items").flickity({
 				imagesLoaded: true,
 				autoPlay: false,
 				pauseAutoPlayOnHover: true,
 				arrowShape: arrowStyle,
+				bgLazyLoad: true,
 				initialIndex: 0,
-				//friction: 1,
-				//selectedAttraction: 1,
+				friction: 1,
+				selectedAttraction: 1,
 				prevNextButtons: false,
 				draggable: false,
 				wrapAround: false,
@@ -216,7 +218,16 @@
 				cellSelector: 'figure',
 				cellAlign: "center"
 			});
-		buildpackCrousel.flickity( 'select', 1 );
+			buildpackCarousel.flickity( 'select', 1 );
+			//TODO
+	    buildpackCarousel.data("flickity");
+	    $(document).on("click", "[flickity='resize']", function() {
+	      setTimeout(function() {
+	        buildpackCarousel.flickity('resize');
+	      }, 200)
+	    })
+
+		}
 
 
 
@@ -229,13 +240,6 @@
 			that.addClass("is-selected");
 			that.siblings().removeClass("is-selected");
 		});
-    //TODO
-    buildpackCrousel.data("flickity");
-    $(document).on("click", "[flickity='resize']", function() {
-      setTimeout(function() {
-        buildpackCrousel.flickity('resize');
-      }, 200)
-    })
 
 
 
@@ -353,252 +357,6 @@
 	 
 	 
 	 
-
-
-
-
-
-
-
-
-
-
-
-
-
-		//Проверка на заполнения полей радио кнопок
-		var inputFilledContent = $("[data-input-filled='content']");
-		inputFilledContent
-			.find("[data-input-filled]:not([data-input-filled='1'])")
-			.addClass("not-filled")
-			.find("input")
-			.attr("disabled", "disabled");
-
-		inputFilledContent.map(function(i, el){
-			var currentCnt;
-			el = $(el);
-			el.find("[data-input-filled] input").on("change", function(){
-				if( !this.checked )
-					return;
-			currentCnt = $(this).closest("[data-input-filled]").attr("data-input-filled")*1;
-			var nextInput = el.find("[data-input-filled='"+(++currentCnt)+"']")
-			nextInput.removeClass("not-filled").find("input[disabled]").removeAttr("disabled");
-			})      
-		})
-
-		$(".buildpack-nav").on("click", "[data-toggle='tab']", function(){
-			var s = $(this).closest(".boxes-cell").addClass("active").siblings().removeClass("active");
-			
-			
-		})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		window.buildpack = {
-			paperOptions: {},
-			currentData: {
-				inputName: "",
-				title: "",
-				desc: ""
-			},
-			update: function(){
-				var options = $.extend( this.paperOptions, this.currentData );
-				console.log(options);
-			},
-			appendInSummary: function ( container ){
-				var containerContent = container || $(".summary-items");
-				for( var i in this.currentData  ){
-					var content = '<div class="summary-item '+this.currentData[i].inputName+'">'+
-													'<span class="summary-title"><b>'+this.currentData[i].title+'</b></span>'+
-													'<span class="summary-desc">'+this.currentData[i].desc+'</span>'+
-												'</div>';
-					if( !containerContent.children().hasClass(this.currentData[i].inputName) )
-						containerContent.append( content );
-					else
-						containerContent.find("."+this.currentData[i].inputName+" .summary-desc").text(this.currentData[i].desc);
-				}
-
-			},
-
-			dataInputConverter: function(self){
-				if( typeof self.attr("data-input") != "undefined" )
-						this.currentData = JSON.parse( self.attr("data-input") );
-				else
-					console.error("Нужны параметры в атрибуте data-input");
-		
-
-			},
-
-			changeImage: function(){
-
-				var paper = (buildpack.paperOptions.paper) ? this.paperOptions.paper.value : null;
-				var handle = (buildpack.paperOptions.handle) ? this.paperOptions.handle.value : null;
-				var size = (buildpack.paperOptions.size) ? this.paperOptions.size.value : null;
-
-				//console.log(paper, handle, size)
-
-				var paper = [paper, handle, size];
-				paper = paper.filter(function(arr) {
-					return arr !== undefined && arr !== null; 
-				});
-				var imgName = "";
-				for (var i = 0; i < paper.length; i++) {
-					i != 0 ? imgName += "-"+paper[i] : imgName += paper[i];
-				}
-				/*Нахождение индекса элемента карусели картинки*/
-				var index = $("[data-buildpack-image*='"+imgName+"']").eq(0).index();
-				buildpackCrousel.flickity( 'select', index );
-			}
-
-
-		}
-
-
-		$("[data-buildpack-event='radio']").on("change", function(){
-			var self = $(this);
-
-
-			buildpack.dataInputConverter(self);
-			buildpack.update();
-			buildpack.appendInSummary();
-
-			if( buildpack.currentData.paper || buildpack.currentData.handle || buildpack.currentData.size)
-				buildpack.changeImage();
-
-		})
-
-
-
- 		
-		$("[data-buildpack-event='num']").on("change", function(){
-			var self = $(this);
-				if( isNaN(self.val()*1) ){
-					self.val("");
-					return;
-				}
-
-				buildpack.dataInputConverter(self);
-				buildpack.update();
-				
-				editionField(self);
-				customsizeField(self);
-
-				buildpack.appendInSummary();
-		})
-
-		$("[data-buildpack-event='text']").on("change", function(){
-			var self = $(this);
-			buildpack.dataInputConverter(self);
-			buildpack.update();
-			buildpack.currentData.comments.value = self.val();
-		})
-
-		/*Клик по кнопке заказать расчёт*/
-		$("[data-src='#ordercalc']").on("click", function(){
-			var self = $(this);
-			var descContent = "";
-			var inputContent = ""
-			for(var i in buildpack.paperOptions ){
-				if (buildpack.paperOptions[i].visible == "hidden")
-					continue;
-				 	descContent += 
-					 	'<tr>'+
-			        '<td>'+buildpack.paperOptions[i].title+'</td>'+
-			        '<td>'+buildpack.paperOptions[i].desc+'</td>'+
-			      '</tr>';
-
-			    inputContent += 
-			    '<input class="modal-control" type="text" '+
-			    			'name="'+buildpack.paperOptions[i].inputName+'" '+
-			    			'value="'+buildpack.paperOptions[i].value+'" '+
-			    			'placeholder="'+buildpack.paperOptions[i].title+'">'
-			      
-			}
-			/*Вставка изображение*/
-			var bg = self.closest(".buildpack-summary").find(".buildpack-summary-img .is-selected .img").attr("style");
-			$("#summary-info .img").attr("style", bg);
-			
-			$("#ordercalc .desc-content table tbody").text("");
-			$("#ordercalc .desc-content table tbody").append(descContent);
-			$("#ordercalc form #field-hidden").append(inputContent);
-			console.log(descContent);
-		})
-		
-
-		$("[data-checked-toggle]").map(function(i, el){
-			$(el).attr("data-checked-toggle")
-		})
-
-
-		window.checkedToggle = function( checkedInput, valueInput, status ){
-			console.log( checkedInput, valueInput, status )
-				/*Убираем отметку на фиксированных размеров*/
-				if( status ){
-					if( $(checkedInput+":checked").length != 0){
-						$(valueInput).val("");
-					}
-				}else{
-					if( $(checkedInput+":checked").length != 0){
-						$(checkedInput+":checked")[0].checked = false;
-					}
-				}
-
-				if( $("[name='buildpack-item-1-size']:checked").length != 0){
-					$("[name='buildpack-item-1-customsize']").val("");
-				}
-
-			
-		}
-
-		var customsize = {};
-		function customsizeField (self){
-			if( !self.filter("[name*='-customsize']").length )
-				return;
-
-
-			var height = self.filter("[data-size-field='height']").val();
-			var width = self.filter("[data-size-field='width']").val();
-			var weight = self.filter("[data-size-field='weight']").val();
-
-			customsize.height = height || customsize.height || "_";
-			customsize.width = width || customsize.width || "_";
-			customsize.weight = weight || customsize.weight || "_";
-			var customsizeValue = customsize.height+"x"+customsize.width+"x"+customsize.weight;
-
-			console.log(customsizeValue, buildpack);
-
-			buildpack.currentData.size.desc = customsizeValue;
-			buildpack.currentData.size.value = customsizeValue;
-		}
-
-		function editionField(self){
-			if( !self.filter("[name*='-edition']").length )
-				return;
-			if( self.filter("[data-input-value-min]").length ){
-				var min = self.attr("data-input-value-min");
-				if( self.val() < min ) self.val(min);
-			}
-			buildpack.currentData.edition.desc = self.val();
-			buildpack.currentData.edition.value = self.val();
-		
-		}
-
 
 
 

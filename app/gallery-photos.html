@@ -18,7 +18,126 @@
 </head>
 
 <body>
-  <div id="page">
+	<div class="hide">
+		<!-- feedback-modal -->
+		<div class="feedback-modal modal-default box-md-5" id="feedback-modal">
+			<div class="form-content p-v-30">
+				<form method="POST" action="">
+					<h3 class="text-center-sm m-v-10 color-2">Связаться с нами</h3>
+					<div class="row">
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>ФИО</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>E-mail</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<textarea class="modal-control field-void" name="" resize="none"></textarea>
+							<label>
+								<p>Сообщение</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Телефон</p>
+							</label>
+						</div>
+						<br>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<button type="submit" class="box-xs-10 btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- recall-modal -->
+		<div class="recall-modal modal-default box-md-2" id="recall-modal">
+			<div class="form-content p-v-30">
+				<form method="POST" action="">
+					<h3 class="text-center-sm m-v-10 color-2">Заказать звонок</h3>
+					<div class="row">
+						<div class="col-md-12 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>ФИО</p>
+							</label>
+						</div>
+						<div class="col-md-12 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Телефон</p>
+							</label>
+						</div>
+						<br>
+						<div class="col-md-12 m-auto p-h-15 m-v-10 control-content">
+							<button type="submit" class="box-xs-8 m-auto btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- ordercalc-modal -->
+		<div class="ordercalc-modal modal-default box-md-5" id="ordercalc">
+			<div class="form-content p-v-30">
+				<form method="POST" action="example.php">
+					<h3 class="text-center-sm m-v-10 color-2">Ваш заказ</h3>
+					<div class="row">
+						<!-- Информация о товаре -->
+						<div class="col-md-12 p-h-15 m-v-30" id="summary-info">
+							<div class="row">
+								<div class="img-content col-md-3 p-h-15">
+									<div class="img bg-size-contain bg-position-center"></div>
+								</div>
+								<div class="desc-content table-content col-md-9 p-h-15">
+									<table><tbody></tbody></table>
+								</div>
+							</div>
+						</div>
+						<!-- Скрытые поля форм -->
+						<div class="col-md-6 p-h-15 m-v-10 control-content hide" id="field-hidden"></div>
+						<!-- Другие поля -->
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>ФИО</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Телефон</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Эл. почта</p>
+							</label>
+						</div>
+						<div class="col-md-6 p-h-15 m-v-10 control-content">
+							<input class="modal-control field-void" type="text" name="" value="">
+							<label>
+								<p>Дополнительная информация</p>
+							</label>
+						</div>
+						<br>
+						<div class="col-xs-12 m-auto p-h-15 m-v-10 control-content text-right">
+							<button type="submit" class="inline-block m-auto btn-def p-h-30 p-v-15 color-white btn-res"><b>Отправить</b></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>  
+	<div id="page">
     <noscript>
       <p>Ваш браузер не поддерживает скрипты!
         <br/> Пожалуйста подключите в настройках браузера Javascript</p>

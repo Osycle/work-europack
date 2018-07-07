@@ -8,192 +8,252 @@
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/plugins.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" />
   <title>Title</title>
   <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
 </head>
 
 <body>
+  <div class="hide">
+    <!-- feedback-modal -->
+    <div class="feedback-modal modal-default box-md-5" id="feedback-modal">
+      <div class="form-content p-v-30">
+        <form method="POST" action="">
+          <h3 class="text-center-sm m-v-10 color-2">Связаться с нами</h3>
+          <div class="row">
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>ФИО</p>
+              </label>
+            </div>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>E-mail</p>
+              </label>
+            </div>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <textarea class="modal-control field-void" name="" resize="none"></textarea>
+              <label>
+                <p>Сообщение</p>
+              </label>
+            </div>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>Телефон</p>
+              </label>
+            </div>
+            <br>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <button type="submit" class="box-xs-10 btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- recall-modal -->
+    <div class="recall-modal modal-default box-md-2" id="recall-modal">
+      <div class="form-content p-v-30">
+        <form method="POST" action="">
+          <h3 class="text-center-sm m-v-10 color-2">Заказать звонок</h3>
+          <div class="row">
+            <div class="col-md-12 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>ФИО</p>
+              </label>
+            </div>
+            <div class="col-md-12 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>Телефон</p>
+              </label>
+            </div>
+            <br>
+            <div class="col-md-12 m-auto p-h-15 m-v-10 control-content">
+              <button type="submit" class="box-xs-8 m-auto btn-def p-h-5 p-v-15 color-white btn-res"><b>Отправить</b></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ordercalc-modal -->
+    <div class="ordercalc-modal modal-default box-md-5" id="ordercalc">
+      <div class="form-content p-v-30">
+        <form method="POST" action="example.php">
+          <h3 class="text-center-sm m-v-10 color-2">Ваш заказ</h3>
+          <div class="row">
+            <!-- Информация о товаре -->
+            <div class="col-md-12 p-h-15 m-v-30" id="summary-info">
+              <div class="row">
+                <div class="img-content col-md-3 p-h-15">
+                  <div class="img bg-size-contain bg-position-center"></div>
+                </div>
+                <div class="desc-content table-content col-md-9 p-h-15">
+                  <table><tbody></tbody></table>
+                </div>
+              </div>
+            </div>
+            <!-- Скрытые поля форм -->
+            <div class="col-md-6 p-h-15 m-v-10 control-content hide" id="field-hidden"></div>
+            <!-- Другие поля -->
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>ФИО</p>
+              </label>
+            </div>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>Телефон</p>
+              </label>
+            </div>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>Эл. почта</p>
+              </label>
+            </div>
+            <div class="col-md-6 p-h-15 m-v-10 control-content">
+              <input class="modal-control field-void" type="text" name="" value="">
+              <label>
+                <p>Дополнительная информация</p>
+              </label>
+            </div>
+            <br>
+            <div class="col-xs-12 m-auto p-h-15 m-v-10 control-content text-right">
+              <button type="submit" class="inline-block m-auto btn-def p-h-30 p-v-15 color-white btn-res"><b>Отправить</b></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>  
   <div id="page">
     <noscript>
       <p>Ваш браузер не поддерживает скрипты!
         <br/> Пожалуйста подключите в настройках браузера Javascript</p>
     </noscript>
-
     <!-- HEADER -->
     <div class="header-hidden"></div>
     <header id="header" class="header-scroll" data-aos="fade">
       <!-- HEADER TOP -->
-      <div class="header-top-content bg-color-2 hidden-sm hidden-xs">
+      <div class="header-top-content color-black parag-gray hidden-sm hidden-xs">
         <div class="container">
           <div class="row">
-            <div class="menu pie-md-elastic-12 p-h-15 text-center hover-color-1 text-nowrap">
+            <div class="logo col-md-2 p-h-15 m-t-15">
+              <div class="img-content">
+                <a href="index.html">
+                  <img src="img/logo.png">
+                </a>
+              </div>
+            </div>
+            <div class="header-phones col-md-2 p-h-15 m-t-20">
+              <div class="m-v-10">
+                <h4 class="color-2">+998 (91) 777 77 77</h4>
+                <p>Пн-пт с 9:00 до 18:00</p>
+              </div>
+              <div class="m-v-10">
+                <h4 class="color-2">+998 (91) 777 77 77</h4>
+              </div>
+            </div>
+            <div class="col-md-6 p-h-15 m-t-25">
+              <div class="header-contacts">
+                <div class="col-md-4 p-r-15">
+                  <h4 class="color-1">zakaz@europack.uz</h4>
+                  <p>общение с менеджером</p>
+                </div>
+                <div class="header-btn-content color-2 col-md-4 p-r-15">
+                  <span class="btn-opacity">
+                    <a href="javascript:;" data-fancybox data-src="#feedback-modal" title="" class="p-v-15">Обратная связь</a>
+                  </span>
+                </div>
+                <div class="header-btn-content color-2 col-md-4 p-r-15">
+                  <span class="btn-def">
+                    <a href="javascript:;" data-fancybox data-src="#recall-modal" title="" class="p-v-15">Заказать звонок</a>
+                  </span>
+                </div>
+                <div class="search-nav col-md-12 m-t-20">
+                  <div class="search-nav-content">
+                    <form action="">
+                      <div class="search-input relative">
+                        <input type="text" name="" value="" placeholder="Поиск">
+                        <div class="btn-content"><button type="submit"><i class="fa fa-search"></i></button></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-lang col-md-2 p-h-15 m-t-25">
+              <ul class="col-md-3">
+                <li class="active"><a href="" title="">РУС</a></li>
+                <li><a href="" title="">O'ZB</a></li>
+              </ul>
+              <div class="col-md-9 img-link">
+                <a href="http://superpack.uz" title="Перейти"><img src="img/other/superpack.png" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- HEADER BOTTOM -->
+      <div class="header-bottom-content color-2 text-uppercase hidden-sm hidden-xs">
+        <div class="container">
+          <div class="row">
+            <div class="menu pie-md-elastic-6 p-h-15 text-center">
               <nav>
                 <ul class="box-xs-10">
-                  <li><a href="addresses.html" title="">Адреса салонов</a></li>
-                  <li><a href="shares.html" title="">Акции</a></li>
-                  <li><a href="company.html" title="">Компания</a>
+                  <li><a href="about.html" title="">О компании</a></li>
+                  <li><a href="gallery-photos.html" title="">Фотогалерея</a></li>
+                  <li><a href="services.html" title="">Услуги</a>
                     <ul class="sub-menu-1">
-                      <li><a href="company.html" title="">О нас</a></li>
-                      <li><a href="news.html" title="">Новости</a></li>
+                      <li><a href="productions.html" title="">Крафт пакеты с нанесением логотипа </a></li>
+                      <li><a href="productions.html" title="">Бабинорезка</a></li>
+                      <li><a href="productions.html" title="">Флекстопечать с рулона на рулон</a></li>
+                      <li><a href="productions.html" title="">Резка рулона на листы</a></li>
                     </ul>
                   </li>
-                  <li><a href="delivery.html" title="">Материалы</a>
-                    <ul class="sub-menu-1">
-                      <li><a href="delivery-productions.html" title="">Пружинные блоки</a></li>
-                      <li><a href="delivery-productions.html" title="">Мягкие наполнители</a></li>
-                      <li><a href="delivery-productions.html" title="">Жесткие наполнители</a></li>
-                      <li><a href="delivery-productions.html" title="">Ткани</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="partners-shares.html" title="">Партнерам</a>
-                    <ul class="sub-menu-1">
-                      <li><a href="franchise.html" title="">Франчайзинг</a></li>
-                      <li><a href="offers.html" title="">Предложение для отелей</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="productions.html" title="">Каталог</a></li>
+                  <li><a href="contacts.html" title="">Контакты</a></li>
                 </ul>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      <!-- HEADER MIDDLE -->
-      <div class="header-middle-content bg-color-white color-black hidden-sm hidden-xs">
-        <div class="container">
-          <div class="row">
-            <div class="logo pie-md-elastic-5 p-h-15">
-              <div class="img-content pie-md pie-dry">
-                <a href="index.html">
-								<img src="img/logo.png" style="width: 115px;">
-							</a>
-              </div>
-            </div>
-            <div class="phones pie-md-elastic-5 p-h-15 text-center hover-color-1">
-              <div class="header-phone">
-                <p class="m-v-10"><a href="tel:+99897774444" title=""><big>+998 97 <big>777-44-44</big></big></a></p>
-                <span class="btn-def radius-2 m-v-10 box-md-5 m-auto"><a href="#modal-feedback" class="p-v-10 p-h-25" title="" data-toggle="modal"><small><b>Обратный звонок</b></small></a></span>
-              </div>
-            </div>
-            <div class="socicons pie-md-elastic-5 text-right-md color-1 hover-color-2">
-              <ul class="list-inline">
-                <li><a href="" title=""><i class="fa fa-send"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-whatsapp"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- HEADER BOTTOM -->
-      <div class="header-bottom-content bg-color-white text-center color-black hidden-sm hidden-xs">
-        <div class="container">
-          <div class="row">
-            <div class="menu-bottom pie-md-elastic-12 p-h-15 ">
-              <ul class="list-inline m-auto hover-color-1">
-                <li><a href="productions.html"><b>Матрасы</b></a>
-                  <div class="submenu-box-wrapper">
-                    <div class="submenu-box text-left shadow-default radius-3">
-                      <div class="radius-3 over-hidden">
-                        <div class="col-md-6 submenu-types">
-                          <h5>Виды</h5>
-                          <ul>
-                            <li><a href="" title="">Беспружинные</a></li>
-                            <li><a href="" title="">Пружинные</a></li>
-                            <li><a href="" title="">Двуспальные</a></li>
-                            <li><a href="" title="">Недорогие</a></li>
-                            <li><a href="" title="">Со скидкой</a></li>
-                            <li><a href="" title="">Детские матрасы</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-6 submenu-brands">
-                          <h5>Бренды</h5>
-                          <ul>
-                            <li><a href="" title=""><img src="img/icons/flags/sweden.jpg" alt=""><span class="vam">Hilding</span></a></li>
-                            <li><a href="" title=""><img src="img/icons/flags/france.jpg" alt=""><span class="vam">Andre Renault</span></a></li>
-                            <li><a href="" title=""><img src="img/icons/flags/switzerland.jpg" alt=""><span class="vam">BicoflexBicoflex</span></a></li>
-                            <li><a href="" title=""><img src="img/icons/flags/norway.jpg" alt=""><span class="vam">Jensen</span></a></li>
-                            <li><a href="" title=""><img src="img/icons/flags/usa.jpg" alt=""><span class="vam">Sleep</span></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li><a href="productions.html"><b>Кровати</b></a></li>
-                <li><a href="productions.html"><b>Подушки</b></a></li>
-                <li><a href="productions.html"><b>Наматрасники</b></a></li>
-                <li><a href="productions.html"><b>Аксессуары для спальни</b></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </header>
     <!-- MIN MENU -->
     <div id="min-menu" data-aos="fade">
       <ul>
-        <li><a href="addresses.html" title="">Адреса салонов</a></li>
-        <li><a href="shares.html" title="">Акции</a></li>
-        <li><a href="company.html" title="">Компания</a>
-          <ul class="sub-menu-1">
-            <li><a href="about.html" title="">О нас</a></li>
-            <li><a href="news.html" title="">Новости</a></li>
-          </ul>
-        </li>
-        <li><a href="delivery.html" title="">Материалы</a>
-          <ul class="sub-menu-1">
-            <li><a href="delivery-productions.html" title="">Пружинные блоки</a></li>
-            <li><a href="delivery-productions.html" title="">Мягкие наполнители</a></li>
-            <li><a href="delivery-productions.html" title="">Жесткие наполнители</a></li>
-            <li><a href="delivery-productions.html" title="">Ткани</a></li>
-          </ul>
-        </li>
-        <li><a href="partners-shares.html" title="">Партнерам</a>
-          <ul class="sub-menu-1">
-            <li><a href="franchise.html" title="">Франчайзинг</a></li>
-            <li><a href="offers.html" title="">Предложение для отелей</a></li>
-          </ul>
-        </li>
-        <hr>
-        <li><a href="productions.html"><b>Матрасы</b></a>
-          <div class="submenu-box-wrapper">
-            <div class="submenu-box text-left shadow-default radius-3">
-              <div class="radius-3 over-hidden">
-                <div class="col-md-6 submenu-types">
-                  <h5>Виды</h5>
-                  <ul>
-                    <li><a href="" title="">Беспружинные</a></li>
-                    <li><a href="" title="">Пружинные</a></li>
-                    <li><a href="" title="">Двуспальные</a></li>
-                    <li><a href="" title="">Недорогие</a></li>
-                    <li><a href="" title="">Со скидкой</a></li>
-                    <li><a href="" title="">Детские матрасы</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-6 submenu-brands">
-                  <h5>Бренды</h5>
-                  <ul>
-                    <li><a href="" title=""><img src="img/icons/flags/sweden.jpg" alt=""><span class="vam">Hilding</span></a></li>
-                    <li><a href="" title=""><img src="img/icons/flags/france.jpg" alt=""><span class="vam">Andre Renault</span></a></li>
-                    <li><a href="" title=""><img src="img/icons/flags/switzerland.jpg" alt=""><span class="vam">BicoflexBicoflex</span></a></li>
-                    <li><a href="" title=""><img src="img/icons/flags/norway.jpg" alt=""><span class="vam">Jensen</span></a></li>
-                    <li><a href="" title=""><img src="img/icons/flags/usa.jpg" alt=""><span class="vam">Sleep</span></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li><a href="productions.html"><b>Кровати</b></a></li>
-        <li><a href="productions.html"><b>Подушки</b></a></li>
-        <li><a href="productions.html"><b>Наматрасники</b></a></li>
-        <li><a href="productions.html"><b>Аксессуары для спальни</b></a></li>
+        <li><a href="about.html" title="">О компании</a></li>
+        <li><a href="gallery-photos.html" title="">Фотогалерея</a></li>
+        <li><a href="services.html" title="">Услуги</a></li>
+        <li><a href="productions.html" title="">Каталог</a></li>
+        <li><a href="contacts.html" title="">Контакты</a></li>
+        <div class="min-menu-footer text-center m-v-15">
+          <span class="btn-def col-xs-6 inline-block m-v-5 bg-color-2">
+            <small>
+              <a href="javascript:;" data-fancybox data-src="#feedback-modal" title="" class="p-v-10">Обратная связь</a>
+            </small>
+          </span>
+          <span class="btn-def col-xs-6 inline-block m-v-5">
+            <small>
+              <a href="javascript:;" data-fancybox data-src="#recall-modal" title="" class="p-v-10">Заказать звонок</a>
+            </small>
+          </span>
+        </div>
+
       </ul>
     </div>
     <!-- MIN MENU HEADER -->
@@ -201,7 +261,9 @@
       <div class="wrapper-bg"></div>
       <div class="col-xs-6">
         <div class="min-menu-logo filter-white">
-          <a href="index.html"><img src="img/logo.png"/></a>
+          <div class="img-content">
+            <a href="index.html"><div class="img" style="background-image: url('img/logo.png');"></div></a>
+          </div>
         </div>
       </div>
       <div class="min-menu-bar col-xs-6">
@@ -216,6 +278,8 @@
     </div>
     <!-- MAIN -->
     <main data-aos="fade" data-aos-delay="0">
+
+
       <div class="main-content over-hidden bg-color-gray ">
         <!-- error -->
         <div class="error">
@@ -244,55 +308,72 @@
     </main>
     <!-- ./MAIN -->
     <!-- FOOTER -->
-    <footer id="footer" class="container-fluid text-center-sm bg-color-2">
+    <footer id="footer" class="container-fluid text-center-sm bg-color-1">
       <div class="container">
-        <div class="footer-content clearfix color-white p-t-5">
-          <div class="footer-socicons col-md-2 m-v-15 text-left-md hover-color-1">
-            <ul class="list-inline">
-              <li><a href="" title=""><i class="fa fa-paper-plane"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-whatsapp"></i></a></li>
-            </ul>
-          </div>
-          <div class="footer-menu col-md-6 text-center m-v-15 hidden-xs hidden-sm hover-color-1">
-            <ul class="list-inline">
-              <li><a href="addresses.html" title="">Адреса салонов</a></li>
-              <li><a href="shares.html" title="">Акции</a></li>
-              <li><a href="company.html" title="">Компания</a></li>
-              <li><a href="delivery.html" title="">Материалы</a></li>
-              <li><a href="partners-shares.html" title="">Партнерам</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 footer-feedback">
-            <p class="m-v-15 col-md-7 hover-color-1"><a href="tel:+99897774444" title=""><big>+998 97 <big>777-44-44</big></big></a></p>
-            <span class="btn-def col-md-5 radius-2 m-v-10 m-auto"><a href="#modal-feedback" class="p-v-10 p-h-5" title="" data-toggle="modal"><small><b>Обратный звонок</b></small></a></span>
-          </div>
-          <div class="col-md-12 m-v-15 payicons">
-            <div class="text-center li-m-default">
-              <ul class="list-inline">
-                <li><a href="" title=""><img src="img/other/logo-click.png" alt=""></a></li>
-                <li><a href="" title=""><img src="img/other/logo-payme.png" alt=""></a></li>
-              </ul>
+        <div class="footer-content clearfix p-t-60">
+          <div class="footer-logo col-md-12 filter-white text-center m-v-15">
+            <div class="img-content">
+              <img src="img/logo.png" alt="">
             </div>
           </div>
+          <div class="row">
+            <div class="footer-menu col-md-3 m-v-15 hidden-xs hidden-sm p-h-15">
+              <h4 class="text-uppercase">Каталог продукции</h4>
+              <ul>
+                <li><a href="productions.html" title="">Крафт пакеты бумажные с ручками</a></li>
+                <li><a href="productions.html" title="">Крафт пакеты бумажные без ручек</a></li>
+                <li><a href="productions.html" title="">Крафт мешки бумажные</a></li>
+                <li><a href="productions.html" title="">Крафт бумага и пергамент</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu col-md-3 m-v-15 hidden-xs hidden-sm p-h-15">
+              <h4 class="text-uppercase">Услуги</h4>
+              <ul>
+                <li><a href="services-article.html" title="">Крафт пакеты с нанесением логотипа </a></li>
+                <li><a href="services-article.html" title="">Бабинорезка</a></li>
+                <li><a href="services-article.html" title="">Флекстопечать с рулона на рулон</a></li>
+                <li><a href="services-article.html" title="">Резка рулона на листы</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu col-md-2 col-md-offset-1 m-v-15 hidden-xs hidden-sm p-h-15">
+              <ul>
+                <li><a href="about.html" title="">О компании</a></li>
+                <li><a href="gallery-photos.html" title="">Фотогалерея</a></li>
+                <li><a href="services.html" title="">Услуги</a></li>
+                <li><a href="productions.html" title="">Каталог</a></li>
+                <li><a href="contacts.html" title="">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer-contacts col-md-3 text-right-md m-v-15 parag-m-v-5 p-h-15">
+              <h4 class="text-uppercase">Контактная информация</h4>
+              <p><b><big>+7-495-971-43-01</big></b></p>
+              <p>Пн-пт с 9:00 до 18:00</p>
+            </div>
+          </div>
+
           <!-- DEV -->
-          <div class="row m-v-15">
-            <div class="col-md-12 p-h-15">
-              <div class="row">
-                <div class="dev hidden-xs hidden-sm float-right-md text-right-md col-md-4 m-v-15 p-h-15">
-                  <a href="https://lifestyle.uz/" class="link" title="Создание и продвижение сайтов">Создание сайтов <em><span class="color-1">Life </span></em>Style</a>
-                </div>
-                <div class="copyright col-md-4 m-v-15 p-h-15">
-                  <p>Copyright © <span class="color-1">Cosmos</span>
-                    <time id="copydate"></time>. Все права защищены</p>
-                  <script>
+          <div class="col-xs-12 m-v-15 footer-dev">
+            <div class="row">
+              <div class="copyright col-md-4 m-v-15 p-h-15">
+                <p>Copyright © <span class="color-2"><i><b>Europack</b></i></span>
+                  <time id="copydate"></time>. Все права защищены</p>
+                <script>
                   copydate.innerText = new Date().getFullYear()
-                  </script>
-                </div>
+                </script>
+              </div>
+              <div class="col-md-4 footer-socicons text-center">
+                <ul class="inline-list">
+                  <li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="" title=""><i class="fa fa-paper-plane"></i></a></li>
+                </ul>
+              </div>
+              <div class="dev hidden-xs hidden-sm text-right-md col-md-4 m-v-15 p-h-15">
+                <a href="https://lifestyle.uz/" class="link" title="Создание и продвижение сайтов">Сайт разаботан в студии <em><span class="color-2">Life </span></em>Style</a>
               </div>
             </div>
           </div>
+   
         </div>
       </div>
     </footer>
@@ -300,10 +381,6 @@
   <!-- SCRIPTS -->
   <script src="js/scripts.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/calc.js"></script>
-  <!-- jQuery REVOLUTION Slider  -->
-  <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-  <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 </body>
 
 </html>
