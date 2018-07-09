@@ -58,6 +58,9 @@ header{
 	transform: inherit;transform: unset;
 
 }
+.header-bottom-right, .header-bottom-left{
+	padding: 20px 0;
+}
 .header-scroll{
 	.menu, .menu .phones, .desc-content, .img-content, img{
 		transition: all 0.3s ease; 
@@ -90,7 +93,8 @@ header{
 	}
 }
 .menu{
-	height: $header-bottom-height;
+	//height: $header-bottom-height;
+	padding: 10px 0;
 	text-align: center;
 	position: relative;
 	ul:not([class*="sub-menu"]){
@@ -183,6 +187,7 @@ header{
 			pointer-events: none;
 		}
 		li{
+			position: relative;
 			font-size: em(15, 16);
 			min-width: 250px;
 			width: auto;
@@ -197,6 +202,9 @@ header{
 					transform: none;transform: unset; 
     			
 				}
+			}
+			&:before{
+				left: 7%;
 			}
 		}
 		a{
@@ -436,7 +444,7 @@ header{
 	button{
 		padding: 12px 20px;
 		margin-left: auto;
-		box-shadow: 0 0 4px 0px rgba(black, 0.5);
+		//box-shadow: 0 0 4px 0px rgba(black, 0.5);
 	}
 }
 .form-modal{

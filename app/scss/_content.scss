@@ -153,7 +153,8 @@
 	}
 }
 .not-filled{
-	opacity: 0.3;
+	opacity: 0.5;
+	//filter: blur(3px);;
 	pointer-events: none;
 }
 .buildpack-carousel{
@@ -193,7 +194,9 @@
 		display: block;
 	} 
 }
-
+.input-void{
+	filter: blur(3px);
+}
 
 
 
