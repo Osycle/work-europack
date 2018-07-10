@@ -210,7 +210,7 @@
 			<div class="header-bottom-content color-2 text-uppercase hidden-sm hidden-xs">
 				<div class="container">
 					<div class="row">
-						<div class="header-bottom-left col-md-2">
+						<div class="header-bottom-left col-md-2 p-h-15">
 							<h4 class="color-2">+998 (91) 777 77 77</h4>
 						</div>
 						<div class="menu col-md-8 p-h-15 text-center">
@@ -231,7 +231,7 @@
 								</ul>
 							</nav>
 						</div>
-						<div class="header-bottom-right text-md-right col-md-2">
+						<div class="header-bottom-right text-md-right col-md-2 p-h-15">
 							<h4 class="color-2">+998 (91) 777 77 77</h4>
 						</div>
 					</div>
@@ -580,36 +580,44 @@
 														</div>
 													</div>
 												</div>
-
+												<div class="col-md-12 p-h-15 text-center" data-input-filled="3">
+													<input type="checkbox" class="hide checkbox-field-customsize" id="checkbox-field-customsize-1">
+													<label for="checkbox-field-customsize-1" role="button">
+														<span class="checkboxed vam inline-block"></span>
+														<span class="vam inline-block">Свои параметры</span>
+													</label>
+												</div>
 												<!-- Заказной размер -->
-												<div class="col-xs-12 field-customsize" data-input-filled="3">
+												<div class="col-xs-12 field-customsize" data-input-filled="3" style="display: none;">
 													<div class="row">
-														<div class="col-md-4 p-h-15 m-v-30">
-															<input type="text" name="buildpack-item-1-customsize" placeholder="Высота" class="box-xs-10 pie-form-control" data-size-field="height" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
-																data-input='{
-																	"size": {
-																		"title": "Размер",
-																		"inputName": "buildpack-item-1-size"
-																	}
-																}'>
-														</div>
-														<div class="col-md-4 p-h-15 m-v-30">
-															<input type="text" name="buildpack-item-1-customsize" placeholder="Ширина" class="box-xs-10 pie-form-control" data-size-field="width" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
-																data-input='{
-																	"size": {
-																		"title": "Размер",
-																		"inputName": "buildpack-item-1-size"
-																	}
-																}'>
-														</div>
-														<div class="col-md-4 p-h-15 m-v-30">
-															<input type="text" name="buildpack-item-1-customsize" placeholder="Глубина" class="box-xs-10 pie-form-control" data-size-field="weight" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
-																data-input='{
-																	"size": {
-																		"title": "Размер",
-																		"inputName": "buildpack-item-1-size"
-																	}
-																}'>
+														<div class="input-content">															
+															<div class="col-md-4 p-h-15 m-v-30">
+																<input type="text" name="buildpack-item-1-customsize" placeholder="Высота" class="box-xs-10 pie-form-control" data-size-field="height" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"inputName": "buildpack-item-1-size"
+																		}
+																	}'>
+															</div>
+															<div class="col-md-4 p-h-15 m-v-30">
+																<input type="text" name="buildpack-item-1-customsize" placeholder="Ширина" class="box-xs-10 pie-form-control" data-size-field="width" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"inputName": "buildpack-item-1-size"
+																		}
+																	}'>
+															</div>
+															<div class="col-md-4 p-h-15 m-v-30">
+																<input type="text" name="buildpack-item-1-customsize" placeholder="Глубина" class="box-xs-10 pie-form-control" data-size-field="weight" data-buildpack-event="num" onchange='checkedToggle(".field-size input", ".field-customsize input", false)' 
+																	data-input='{
+																		"size": {
+																			"title": "Размер",
+																			"inputName": "buildpack-item-1-size"
+																		}
+																	}'>
+															</div>
 														</div>
 													</div>
 												</div>

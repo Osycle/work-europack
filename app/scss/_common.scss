@@ -46,10 +46,22 @@ $bg-color-black: #555555;
 		cursor: pointer;
 	}
 }
-input[type='radio']{
+.checkboxed{
+	@extend .fa;
+	@extend .fa-check;
+	border: 1px solid $color-2;
+	padding: 1px;
+	color: $color-2;
+}
+input[type='radio'], input[type='checkbox']{
 	&:checked ~ label .radio-circle{
 		background-color: $color-1;
 	}
+	&:checked ~ label .checkboxed{
+		background-color: $color-1;
+		color: white;
+	}
+
 	&:disabled ~ label{
 		opacity: 0.3;
 		&:hover{

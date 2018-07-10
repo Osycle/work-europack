@@ -60,12 +60,17 @@ header{
 }
 .header-bottom-right, .header-bottom-left{
 	padding: 20px 0;
+	transition: all 0.3se ease;
+	opacity: 0;
 }
 .header-scroll{
 	.menu, .menu .phones, .desc-content, .img-content, img{
 		transition: all 0.3s ease; 
 	}
 	&.scrolled, &.header-pages{
+		.header-bottom-right, .header-bottom-left{
+			opacity: 1;
+		}
 		.header-top-content{
 			transform: perspective(1500px) rotateX(90deg);	
 		}
