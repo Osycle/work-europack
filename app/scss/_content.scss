@@ -103,10 +103,17 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 1000px;
+	.buildpack-block{
+
+	}
+}
+.buildpack-wrapper-shadow{
+	box-shadow: 0 10px 70px -20px rgba(0,0,0,0.86);
+	padding: 20px 25px;
 }
 .buildpack-nav{
 	background-color: white;
-	position: relative;
+	//position: relative;
 	&:before, &:after{
 		@extend .claf;
 		background-color: white;
